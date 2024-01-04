@@ -15,7 +15,7 @@ body {
 
 /* NAVIGATION BAR */
 .container-fluid {
-    max-width: 1300px;
+    max-width: 1100px;
     padding: 0px 24px;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .hero-container {
-    width: 1300px;
+    width: 1100px;
     margin-top: 71.16px;
     padding: 65px 24px 80px 24px;
 }
@@ -94,7 +94,7 @@ body {
 }
 
 .handbook {
-    font-size: 7rem;
+    font-size: 5rem;
     color: #ffffff;
     font-weight: bold;
     font-style: italic;
@@ -126,17 +126,6 @@ body {
     --bs-btn-active-border-color: #716ecc;
 }
 
-@media (max-width: 1180px) {
-    /* SHRINK LAYOUT */
-    .handbook {
-        font-size: calc(1.3rem + 7.6vw);
-    }    
-    
-    .stn31, .guide {
-        font-size: calc(12px + 1vw);
-    }
-}
-
 @media (max-width: 767px) {
     /* VERTICAL LAYOUT */
     .search-bar {
@@ -161,9 +150,12 @@ body {
     }
 
     .handbook {
-    font-size: 15.7vw;    
+        font-size: 15.6vw;
     }
     
+    .stn31, .guide {
+        font-size: max(1.5rem, 6vw);
+    }
 }
 
 @media (max-width: 350px) {
@@ -224,6 +216,15 @@ body {
         background-image: url(./assets/icons/browser.svg);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+}
+@media (max-width: 1180px) {
+    .handbook {
+        font-size: calc(1.3rem + 7.6vw);
+    }    
+    
+    .stn31, .guide {
+        font-size: calc(12px + 1vw);
     }
 }
 */
