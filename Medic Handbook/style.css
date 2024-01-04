@@ -1,0 +1,225 @@
+:root {
+    --bs-emphasis-color-rgb: 170, 167, 255;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #08082b;
+    display: flex;
+    justify-content: center;
+}
+
+/* NAVIGATION BAR */
+.container-fluid {
+    max-width: 1300px;
+    padding: 0px 24px;
+}
+
+.navbar {
+    background-color: #07084bc2;
+    --bs-navbar-brand-font-size: 1.5rem;
+    --bs-navbar-toggler-focus-width: 0.2rem;
+    padding: 12px 0px ;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.nav-link {
+    color: #d1d0d0;
+    font-size: 1.15rem;
+}
+
+.navbar-toggler {
+    border-radius: 2%;
+    --bs-navbar-toggler-padding-x: 0.2rem;
+    --bs-navbar-toggler-padding-y: 0.2rem;
+    --bs-border-width: 0.15rem;
+
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(170, 167, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.btn-outline-success {
+    --bs-btn-color: #AAA7FF;
+    --bs-btn-border-color: #AAA7FF;
+    --bs-btn-hover-bg: #716ecc;
+    --bs-btn-hover-border-color: #716ecc;
+    --bs-btn-active-bg: #AAA7FF;
+    --bs-btn-active-border-color: #AAA7FF;
+    --bs-btn-disabled-color: #AAA7FF;
+    --bs-btn-disabled-border-color: #AAA7FF;
+}
+
+.form-control {
+    background-color: #ffffffce;
+}
+
+[role="search"] {
+    padding-left: 16px;
+}
+
+#brand {
+    height: 35px;
+}
+/* NAVIGATION BAR ENDS */
+
+/* HERO */
+.hero-background {
+    width: 100vw;
+    background-image: url("./assets/images/alpha.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: right top;
+}
+
+.hero-container {
+    width: 1300px;
+    margin-top: 71.16px;
+    padding: 65px 24px 80px 24px;
+}
+
+.stn31 {
+    font-size: 1.5rem;
+    color: #d1d0d0;
+}
+
+.handbook {
+    font-size: 7rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.guide {
+    font-size: 1.5rem;
+    color: #d1d0d0;
+}
+
+.button-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.main-btns{
+    height: 60px;
+    width: 200px;
+}
+
+.btn-primary {
+    --bs-btn-bg: #6543ff;
+    --bs-btn-border-color: #6543ff;
+    --bs-btn-hover-bg: #7859ff;
+    --bs-btn-hover-border-color: #7859ff;
+    --bs-btn-active-bg: #716ecc;
+    --bs-btn-active-border-color: #716ecc;
+}
+
+@media (max-width: 1180px) {
+    /* SHRINK LAYOUT */
+    .handbook {
+        font-size: calc(1.3rem + 7.6vw);
+    }    
+    
+    .stn31, .guide {
+        font-size: calc(12px + 1vw);
+    }
+}
+
+@media (max-width: 767px) {
+    /* VERTICAL LAYOUT */
+    .search-bar {
+        display: none;
+    }
+
+    .hero-container {
+        margin-top: 71.16px;
+        padding: 20px 24px 35px 24px;
+    }
+
+    .button-container {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center
+    }
+
+    .main-btns {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    #brand {
+        height: 0px;
+        width: 0px;
+        padding: 16px;
+        background-image: url(./assets/icons/browser.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/*  
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: px;
+    }
+
+    .main {
+        background-image: url("./assets/images/alpha-mobile.jpg");
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        overflow: auto
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .text {
+        display: inline;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 350px) {
+    #brand {
+        height: 0px;
+        width: 0px;
+        padding: 16px;
+        background-image: url(./assets/icons/browser.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+*/
+
