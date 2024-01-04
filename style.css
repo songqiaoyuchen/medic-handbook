@@ -159,6 +159,11 @@ body {
     .main-btns {
         width: 100%;
     }
+
+    .handbook {
+    font-size: 15.7vw;    
+    }
+    
 }
 
 @media (max-width: 350px) {
