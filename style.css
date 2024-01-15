@@ -23,8 +23,9 @@ body {
 .navbar {
     background-color: #07084bc2;
     --bs-navbar-brand-font-size: 1.5rem;
-    --bs-navbar-toggler-focus-width: 0.2rem;
+    --bs-navbar-toggler-focus-width: 0;
     padding: 12px 0px ;
+    z-index: 1;
 }
 
 .navbar-nav {
@@ -40,13 +41,30 @@ body {
     border-radius: 2%;
     --bs-navbar-toggler-padding-x: 0.2rem;
     --bs-navbar-toggler-padding-y: 0.2rem;
-    --bs-border-width: 0.15rem;
-
+    --bs-border-width: 0;
+    cursor: pointer;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(170, 167, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #AAA7FF;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+  }
 
 .btn-outline-success {
     --bs-btn-color: #AAA7FF;
@@ -81,6 +99,30 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 /* NAVIGATION BAR ENDS */
+
+/* SIDENAV */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 46px; /* Stay at the top */
+    right: 0;
+    background-color: #08082b; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 16px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  /* SIDENAV ENDS */
 
 .main {
     display: flex;
@@ -185,7 +227,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .nav-item {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 @media (max-width: 1100px) {
@@ -198,6 +240,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     /* VERTICAL LAYOUT */
     .navbar {
         background-color: #08082b;
+        padding-top: 0px;
     }
 
     .search-bar {
@@ -257,63 +300,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     }
 }
 
-/*  
-
-@media (max-width: 1200px) {
-
-}
-
-@media (max-width: 992px) {
-    
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: px;
-    }
-
-    .main {
-        background-image: url("./assets/images/alpha-mobile.jpg");
-        height: 100vh;
-        width: 100vw;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        overflow: auto
-    }
-
-    .search-bar {
+@media (min-width: 767px) {
+    .sidenav {
         display: none;
     }
-
-    .text {
-        display: inline;
-        overflow-wrap: anywhere;
-    }
 }
-
-@media (max-width: 576px) {
-
-}
-
-@media (max-width: 350px) {
-    #brand {
-        height: 0px;
-        width: 0px;
-        padding: 16px;
-        background-image: url(./assets/icons/browser.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-@media (max-width: 1180px) {
-    .handbook {
-        font-size: calc(1.3rem + 7.6vw);
-    }    
-    
-    .stn31, .guide {
-        font-size: calc(12px + 1vw);
-    }
-}
-*/
 
