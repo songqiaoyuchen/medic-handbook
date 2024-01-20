@@ -378,8 +378,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         display: flex;
         flex-direction: column;
         margin-top: 63px;
-        padding: 20px 24px 35px 24px;
+        padding: 20px 0px 35px 0px;
         align-items: center;
+        width: calc(100vw - 48px);
     }
 
     .button-container {
