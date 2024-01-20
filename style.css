@@ -360,6 +360,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 @media (max-width: 767px) {
     /* VERTICAL LAYOUT */
+    body {
+        width: 100vw
+    }
+    
     .navbar {
         background-color: #08082b;
         border-top: none;
