@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- to change font -->
 
 <head>
     <title>Medic Handbook</title>
@@ -11,10 +12,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script>
+      function toggleNav(x) {
+        if(document.getElementById("sideNav").style.width === "0px"){
+          document.getElementById("sideNav").style.width = "200px";
+          document.getElementsByTagName("main")[0].style.overflow = "hidden"
+        }else{
+          document.getElementById("sideNav").style.width = "0px";
+          document.getElementsByTagName("main")[0].style.overflow = "scroll;"
+        }
+        x.classList.toggle("change");
+      }
+
+      function toggleDropdown1(x) {
+        if(document.getElementById("firstDrop").style.height === "0px"){
+          document.getElementById("firstDrop").style.height = "120px"
+        }else{
+          document.getElementById("firstDrop").style.height = "0px";
+        }
+      }
+
+      function toggleDropdown2(x) {
+        if(document.getElementById("secondDrop").style.height === "0px"){
+          document.getElementById("secondDrop").style.height = "120px"
+        }else{
+          document.getElementById("secondDrop").style.height = "0px";
+        }
+      }
+
+      function toggleDropdown3(x) {
+        if(document.getElementById("thirdDrop").style.height === "0px"){
+          document.getElementById("thirdDrop").style.height = "80px"
+        }else{
+          document.getElementById("thirdDrop").style.height = "0px";
+        }
+      }
+    </script>
 </head>
 
-<body class="homepage">
+<body class="article-page">
   <!-- NAVBAR -->
   <nav class="navbar fixed-top navbar-expand-md">
     <div class="container-fluid">
@@ -35,9 +71,9 @@
             </div>
           </div>
           <div class="dropdown">
-            <a class="nav-link dropbtn" href="#">Guides</a>
+            <a class="nav-link dropbtn current-menu">Guides</a>
             <div class="dropdown-content">
-              <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
+              <a class="sub-link current-page" href="./zoll.html">ZOLL X Series</a>
               <a class="sub-link" href="#">Blood Glucometer</a>
               <a class="sub-link" href="#">Laerdal Suction Unit</a>
             </div>
@@ -71,7 +107,7 @@
     </div>
     <a class="dropdown-btn nav-link" onclick="toggleDropdown2(this)">Guides</a>
     <div id="secondDrop" class="dropdown-container" style="height: 111px;">
-      <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
+      <a class="sub-link" href="#">ZOLL X Series</a>
       <a class="sub-link" href="#">Blood Glucometer</a>
       <a class="sub-link" href="#">Laerdal Suction Unit</a>
     </div>
@@ -85,29 +121,16 @@
   </div>
 
   <!-- MAIN -->
-  <main draggable="false">
-    <div class="hero-background" draggable="false">
-      <div class="hero-container">
-        <div class="subtitle">/ STN 31</div>
-        <div class="title">MEDIC HANDBOOK</div>
-        <div class="subtitle">A guide to working as a medic in Yishun Fire Station.</div>
-        <div class="button-container">
-          <button type="button" class="main-btns btn btn-primary btn-lg">Start reading</button>
-          <button type="button" class="main-btns btn btn-outline-danger btn-lg">Send feedback</button>
-        </div>
-      </div>
-    </div>
+  <div class="main">
+    <div class="container-fluid">
+      <div class="directory">
 
-    <!-- KEY ARTICLES -->
-    <div class="featured-container" draggable="false">
-      <div class="heading">Key Articles</div>
-      <div class="card-container">
-        <div class="card">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</div>
-        <div class="card">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</div>
-        <div class="card">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+      </div>
+      <div class="article">
+        <h1>ZOLL X Series (Advanced)</h1>
+        <img src="./assets/images/zoll.png">
+        <h2>ZOLL Monitor</h2>
+        <h3></h3>
       </div>
     </div>
 
@@ -119,6 +142,6 @@
         </a>
       </footer>
     </div>
-  </main>
+  </div>
 </body>
 </html>

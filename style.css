@@ -23,7 +23,11 @@ main {
     align-items: center;
 }
 
-/* NAVIGATION BAR */
+a {
+    cursor: pointer;
+}
+
+/* NAVBAR */
 .container-fluid {
     max-width: 1100px;
     padding: 0px 24px;
@@ -137,6 +141,15 @@ main {
     padding-left: 16px;
 }
 
+.current-menu {
+    color: rgb(170, 167, 255);
+}
+
+.current-page {
+    background-color: #aaa7ff56;
+    border-radius: 0.1cm;
+}
+
 /* clears the 'X' from Internet Explorer */
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
 input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
@@ -146,19 +159,19 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
-/* NAVIGATION BAR ENDS */
+
 
 /* SIDENAV */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
-    top: 62px; /* Stay at the top */
+    height: 100%; 
+    width: 0px; 
+    position: fixed; 
+    z-index: 2; 
+    top: 63px; 
     right: 0;
-    background-color: #08082b; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #08082b; 
+    overflow-x: hidden; 
+    transition: 0.3s; 
   }
 
 .sidenav .nav-link {
@@ -192,7 +205,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .dropdown-container {
     display: block;
     transition: 0.3s;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
 .dropdown-btn {
@@ -207,7 +220,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .change .bar3 {
     transform: translate(0, -9px) rotate(45deg);
   }
-/* SIDENAV ENDS */
+
 
 /* HERO */
 .hero-background {
@@ -222,7 +235,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .hero-container {
     width: 1100px;
-    margin-top: 62px;
+    margin-top: 63px;
     padding: 65px 24px 80px 24px;
 }
 
@@ -259,7 +272,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     --bs-btn-active-bg: #716ecc;
     --bs-btn-active-border-color: #716ecc;
 }
-/* HERO ENDS */
+
 
 /* FEATURED */
 .featured-container {
@@ -289,7 +302,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     height: 300px;
     overflow: hidden;
 }
-/* FEATURED ENDS */
+
 
 /* FOOTER */
 .text-body-secondary {
@@ -309,6 +322,34 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-size: 16px !important;
 }
 
+
+/* SUBPAGES */
+.article-page .container-fluid {
+    max-width: 1400px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .container-fluid {
+    margin-top: 63px;
+    display: flex;
+    height: 800px;
+}
+
+.directory {
+    flex-grow: 1;
+    background-color: #6543ff;
+}
+
+.article {
+    flex-grow: 4;
+    background-color: #AAA7FF;
+}
+
 @media (max-width: 1100px) {
     .footer-container {
         width: calc(100vw);
@@ -320,6 +361,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     .navbar {
         background-color: #08082b;
         border-top: none;
+        border-bottom: solid rgb(114, 83, 255) 1px;
     }
 
     .search-bar {
@@ -333,7 +375,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     .hero-container {
         display: flex;
         flex-direction: column;
-        margin-top: 58px;
+        margin-top: 63px;
         padding: 20px 24px 35px 24px;
         align-items: center;
     }
