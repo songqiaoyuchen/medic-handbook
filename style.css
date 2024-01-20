@@ -374,10 +374,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         display: none;
     }
 
-    .hero-background {
-        width: 100vw;
-    }
-
     .hero-container {
         display: flex;
         flex-direction: column;
