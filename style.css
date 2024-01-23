@@ -4,6 +4,7 @@
 
 :root {
     --bs-emphasis-color-rgb: 170, 167, 255;
+    --bs-body-line-height: 1.8
 }
 
 html {
@@ -246,7 +247,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .hero-container {
     width: 1100px;
-    margin-top: 63px;
+    margin-top: 71.19px;
     padding: 65px 24px 80px 24px;
 }
 
@@ -337,21 +338,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
 /* SUBPAGES */
-body {
-    font-size: 18px;
-
-}
-
 h1 {
     color: white !important;
-    font-size: 36px;
+    font-size: 30px;
     margin: 24px 0px;
     font-weight: bold;
 }
 
 h2 {
     color: white !important;
-    font-size: 30px;
+    font-size: 27px;
     margin: 24px 0px;
     font-weight: bold;
 }
@@ -366,10 +362,9 @@ h3 {
 
 h4 {
     color: white !important;
-    font-size: 20px;
+    font-size: 21px;
     margin: 24px 0px;
     font-weight: bold;
-    padding-left: 24px;
 }
 
 .article *{
@@ -390,8 +385,13 @@ h4 {
     border-radius: 5px;
 }
 
+.inbox-red {
+    color: rgb(255, 96, 96);
+    padding: 0px 3px;
+}
+
 /* CONTAINERS */
-ul {
+ul, ol {
     padding: 0px 24px;
     margin: 0;
     margin-bottom: 24px;
@@ -408,7 +408,7 @@ li {
 }
 
 .article-page .container-fluid {
-    max-width: 1400px;
+    max-width: 1100px;
 }
 
 .article-page main {
@@ -418,14 +418,14 @@ li {
 }
 
 .main-container {
-    max-width: 1400px;
-    margin-top: 63px;
+    margin-top: 71.19px;
     padding: 0px 24px;
     display: flex;
+    justify-content: center;
 }
 
 .directory {
-    flex-basis: 600px;
+    width: 300px;
     background-color: #6543ff;
     display: flex;
     flex-direction: column;
@@ -433,6 +433,7 @@ li {
 
 .article {
     padding-left: 60px;
+    flex-basis: 752px;
     /* TBU */
 }
 
@@ -477,8 +478,18 @@ li {
     border-radius: 5px;
 }
 
-.sub-grid {
-    margin-left: 24px;
+.info-box {
+    display: flex;
+    background-color: rgba(64, 161, 226, 0.2);
+    border: solid rgb(53, 129, 180) 2px;
+    border-left: solid #6ac3ff 5px;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    padding: 8px;
+}
+
+.icon-box {
+    padding-right: 8px;
 }
 
 /* IMAGES */
@@ -514,10 +525,11 @@ li {
     /* VERTICAL LAYOUT */
     body {
         width: 100vw;
+        font-size: 16px;
     }
 
     .navbar {
-        background-color: #08082b;
+        background-color: #0e0535;
         border-top: none;
         border-bottom: solid rgb(114, 83, 255) 1px;
     }
@@ -578,6 +590,22 @@ li {
 
     .h3-container-flex {
         flex-direction: column;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 21px;
     }
 }
 
