@@ -532,6 +532,7 @@ li {
         background-color: #0e0535;
         border-top: none;
         border-bottom: solid rgb(114, 83, 255) 1px;
+        padding-top: 0px;
     }
 
     .search-bar {
