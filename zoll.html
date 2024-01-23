@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- to change font -->
 
 <head>
     <title>Medic Handbook</title>
@@ -12,42 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
-    <script>
-      function toggleNav(x) {
-        if(document.getElementById("sideNav").style.width === "0px"){
-          document.getElementById("sideNav").style.width = "200px";
-          document.getElementsByTagName("main")[0].style.overflow = "hidden"
-        }else{
-          document.getElementById("sideNav").style.width = "0px";
-          document.getElementsByTagName("main")[0].style.overflow = "scroll;"
-        }
-        x.classList.toggle("change");
-      }
-
-      function toggleDropdown1(x) {
-        if(document.getElementById("firstDrop").style.height === "0px"){
-          document.getElementById("firstDrop").style.height = "120px"
-        }else{
-          document.getElementById("firstDrop").style.height = "0px";
-        }
-      }
-
-      function toggleDropdown2(x) {
-        if(document.getElementById("secondDrop").style.height === "0px"){
-          document.getElementById("secondDrop").style.height = "120px"
-        }else{
-          document.getElementById("secondDrop").style.height = "0px";
-        }
-      }
-
-      function toggleDropdown3(x) {
-        if(document.getElementById("thirdDrop").style.height === "0px"){
-          document.getElementById("thirdDrop").style.height = "80px"
-        }else{
-          document.getElementById("thirdDrop").style.height = "0px";
-        }
-      }
-    </script>
+    <script src="./script.js"></script>
 </head>
 
 <body class="article-page">
@@ -88,6 +52,7 @@
           <a class="nav-link" href="#">About</a>
         </div>
       </div>
+      <!-- SEARCH -->
       <div class="search-bar">
         <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Not Available" aria-label="Search">
@@ -100,19 +65,19 @@
   <!-- SIDENAV -->
   <div id="sideNav" class="sidenav" style="width: 0px;">
     <div class="dropdown-btn nav-link" onclick="toggleDropdown1(this)">References</div>
-    <div id="firstDrop" class="dropdown-container" style="height: 111px;">
+    <div id="firstDrop" class="dropdown-container" style="height: 113px;">
       <a class="sub-link" href="#">Gen6 Checklist</a>
       <a class="sub-link" href="#">Gen7 Checklist</a>
       <a class="sub-link" href="#">Equipment List</a>
     </div>
     <a class="dropdown-btn nav-link" onclick="toggleDropdown2(this)">Guides</a>
-    <div id="secondDrop" class="dropdown-container" style="height: 111px;">
-      <a class="sub-link" href="#">ZOLL X Series</a>
+    <div id="secondDrop" class="dropdown-container" style="height: 113px;">
+      <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
       <a class="sub-link" href="#">Blood Glucometer</a>
       <a class="sub-link" href="#">Laerdal Suction Unit</a>
     </div>
     <a class="dropdown-btn nav-link" onclick="toggleDropdown3(this)">Admin</a>
-    <div id="thirdDrop" class="dropdown-container" style="height: 80px;">
+    <div id="thirdDrop" class="dropdown-container" style="height: 113px;">
       <a class="sub-link" href="#">Roster</a>
       <a class="sub-link" href="#">Leaves</a>
     </div>
@@ -121,18 +86,473 @@
   </div>
 
   <!-- MAIN -->
-  <div class="main">
-    <div class="container-fluid">
+  <main>
+    <div class="main-container">
+      <!-- DIRECTORY -->
       <div class="directory">
-
+        <a class="nav-link">ZOLL X Series</a>
+        <a class="nav-link">Basic Information</a>
+          <a class="sub-link">Front Panel</a>
+          <a class="sub-link">Display Screen</a>
+        <a class="nav-link">First Parade Task</a>
+          <a class="sub-link">ZOLL Battery Check</a>
+          <a class="sub-link">ZOLL Power-on Test</a>
+        <a class="nav-link">Proficiency Requirement</a>
+        <a class="nav-link">General Troubleshooting</a>
+        <a class="nav-link">Item Checklist</a>
       </div>
+
+      <!-- ARTICLE -->
       <div class="article">
-        <h1>ZOLL X Series (Advanced)</h1>
-        <img src="./assets/images/zoll.png">
-        <h2>ZOLL Monitor</h2>
-        <h3></h3>
+        <h1>ZOLL X Series</h1>
+          <!-- GENERAL INFO -->
+          <h2>General Information</h2>
+            <div class="h2-container">
+              <h3>Front Panel</h3>
+                <div class="h3-container">
+                  <img class="illust" src="./assets/images/zoll.png">
+                </div>
+              <h3>Display Screen</h3>
+                <div class="h3-container">
+                  <img class="illust" src="./assets/images/screen.png">
+                </div>
+              <h3>Quick Access Keys</h3>
+                <div class="h3-container">
+                  <div class="table-container">
+                    <div class="table-cell">
+                      <div class="bold">12 lead</div>
+                      <img src="./assets/images/12lead.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Displays the 12-lead monitoring screen.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Print</div>
+                      <img src="./assets/images/print.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Starts or stops a continuous chart print.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Alarms</div>
+                      <img src="./assets/images/alarm.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Displays the Limits option to allow the user to view/set all parameter
+                        alarm limits.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Log</div>
+                      <img src="./assets/images/log.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Opens the Log Control panel.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Setup</div>
+                      <img src="./assets/images/setup.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Displays the Setup menu to allow the user to access past readiness tests.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Treatment Summary</div>
+                      <img src="./assets/images/treatment_summary.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Displays treatment summary cases, which you can print.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Print Trends</div>
+                      <img src="./assets/images/print_trends.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Prints the trends that are displayed in the Trend Summary window.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Transfer Log</div>
+                      <img src="./assets/images/transfer_log.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Transfers the current data in the log to a USB drive.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Acquire</div>
+                      <img src="./assets/images/lead.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>the ECG input source for the first waveform trace.</div> 
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Stop Acquisition</div>
+                      <img src="./assets/images/stop_acquisition.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Stops acquisition of 12-lead data.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Patient Information</div>
+                      <img src="./assets/images/patient_info.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Allows you to enter information to accompany 12-lead data: patient
+                        name, age, gender, and ID.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">12-Lead Review</div>
+                      <img src="./assets/images/12lead_review.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Reviews all your 12-lead captured data.</div>
+                    </div>
+                    <div class="table-cell">
+                      <div class="bold">Transmit</div>
+                      <img src="./assets/images/transmit.png" class="qak">
+                    </div>
+                    <div class="table-cell">
+                      <div>Transmits 12-lead data.</div>
+                    </div>
+                  </div>
+                </div>  
+            </div>
+          <!-- FIRST PARADE TASK -->
+          <h2>First Parade Tasks</h2>
+            <div class="h2-container">
+              <h3>ZOLL Unit Check</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>There should not be any presence of blood or bodily fluid stains on the unit.</li>
+                    <li>There should not be any presence of cracks on the unit.</li>
+                    <li>There should not be any presence of holes along the tubing or frayed cables.</li>
+                    <li>Buckles and zips should be able to be securely fastened.</li>
+                    <li>There should not be any wear and tear on the separate compartment.</li>
+                    <li>The unit should not be past the servicing due date.</li>
+                  </ul>
+                </div>
+
+              <h3>ZOLL Battery Check</h3>
+                <div class="h3-container">
+                  <img src="./assets/images/zoll_battery.png" class="illust" id="zoll_battery">
+                  <ul>
+                    <li>There should be at least <span class="yellow">2 ZOLL batteries</span>  charged to a minimum of <span class="red">3hrs</span>.</li>
+                    <li>The battery should be able to be charged in the ambulance using either a auxillary power cable or a charger dock.</li>
+                  </ul>                
+                  <div>
+                    <h4>Charging ZOLL batteries</h4>
+                    <div class="square-grid sub-grid">
+                      <img class="table-cell fig" src="./assets/images/zoll_dock.png">
+                      <img class="table-cell fig" src="./assets/images/zoll_cable.png">
+                      <div class="table-cell">Slide the battery pack into the open battery bay and press it firmly against the back of the charger until it clicks.</div>
+                      <div class="table-cell">Align the white arrow of the auxiliary power cable with the white dot on the input connector on the back of the unit and push it in.</div>
+                    </div>
+                  </div>
+                </div>                
+
+
+              <h3>ZOLL Power-on Test</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>Visual alarm indicators all light up when ZOLL is powering on.</li>
+                    <li>The RFU indicator shows “Do not use” when powering on and displays “Ready” after powering on.</li>
+                    <li>Display screen prompts “Self-Test Passed” on display screen after being powered on.</li>
+                    <li>The time and date of the ZOLL should be synchronised with the ACES MDT.</li>
+                  </ul>
+                  <div class="table-container">
+                    <div class="table-cell">
+                      <div class="bold">Ready For Use</div>
+                      <img class="qak" src="./assets/images/rfu_rfu.png">
+                    </div>
+                    <div class="table-cell">The device is ready for use.</div>
+                    <div class="table-cell">
+                      <div class="bold">Do Not Use</div>
+                      <img class="qak" src="./assets/images/rfu_dnu.png">
+                    </div>
+                    <div class="table-cell">
+                      <ul class="table-ul">
+                        <li>The battery is not properly installed. OR</li>
+                        <li>No battery is installed and auxiliary power is not present. OR</li>
+                        <li>A very low battery (below software shutdown limit) was installed. OR</li>
+                        <li>A critical self-test has failed.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              <h3>ZOLL AED Check</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>There should not be any presence of blood or bodily fluid stains on the cables.</li>
+                    <li>The cables should not be frayed and connectors should not be chipped.</li>
+                    <li>The self-test plug should be present.</li>
+                    <li>The defib pad packaging should be sealed and not expired.</li>
+                    <li>The Multifunction Cable (MFC) should be attached to the defib pad through the CPR Connector.</li>
+                  </ul>     
+                  <div class="square-grid">
+                    <img class="table-cell fig" src="./assets/images/mfc.png">
+                    <img class="table-cell fig" src="./assets/images/cpr_connector.jpg">
+                    <div class="table-cell">Multifunction Cable</div>
+                    <div class="table-cell">CPR Connector</div>
+                  </div>          
+                </div>
+              <h3>Defibrillator Short Test</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>Connect the CPR Connector to the black self-test plug.</li>
+                    <li>Press the “Energy Select” button and select 30 joules</li>
+                    <li>Press the “Charge” button and allow ZOLL to charge.</li>
+                    <li>Press the “Shock” button when the button lights up in orange.</li>
+                    <li>Paste into the Defib Short Test strip to the checklist, write the necessary information and obtain a signature from the paramedic in charge.</li>
+                  </ul>                  
+                </div>
+              <h3>ZOLL SpO2 Check</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>Are the main trunk, adult and paediatric sensor cables all present?</li>
+                    <li>Is the portable SpO2 present? (Make sure the “Low Battery” icon is not flashing.)</li>
+                    <li>Are the cables clean and free from blood?</li>
+                    <li>Are there any frayed cables?</li>
+                    <li>Apply the SpO2 sensor to your finger and a reading should be displayed on the ZOLL screen. Repeat for both adult and paediatric sensors.</li>
+                  </ul>                  
+                </div>
+              <h3>ZOLL NIBP Check</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>Are there any frayed cables?</li>
+                    <li>Are the cables clean and free from blood and stains?</li>
+                    <li>Are all BP cuffs (sizes 9, 10, 11, 12) accounted for?</li>
+                    <li>Are there neonatal BP cuffs (sizes 1, 2, 3, 4, 5) and a compatible single-lumen BP hose inside the Maternity Bag?</li>
+                    <li>Apply BP cuff on self and perform BP measurement.</li>
+                    <li>Ensure there are no leakages on BP cuffs or cables.</li>
+                  </ul>                
+                </div>
+              <h3>ZOLL ECG Check</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>Are there any frayed cables?</li>
+                    <li>Are the cables clean and free of electrode gel and blood?</li>
+                    <li>Are the cables neatly packed to prevent entanglement?</li>
+                    <li>Are electrodes attached to ECG leads for immediate use and spare electrodes pressent?</li>
+                  </ul>                
+                </div>
+              <h3>Transmission Test</h3>
+                <div class="h3-container">
+                  <ul>
+                    <li>Go to the 12-lead ECG screen using quick access keys.</li>
+                    <li>Capture the empty screen using quick access keys.</li>
+                    <li>Press the “Transmit” button with the envelope icon.</li>
+                    <li>Transmit to “3rd Div Test”</li>
+                    <li>Ensure the screen displays “Transmission successful” and the green visual alarm indicator lights up.</li>
+                  </ul>                
+                </div>
+            </div>
+          <!-- PROFICIENCY REQUIREMENT -->
+          <h2>Proficiency Requirement</h2>
+              <h3>Changing patient mode</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Turn on the ZOLL, navigate to and select the patient mode field.</li>
+                  <li>The default patient mode is set to “Adult”. Use the navigation keys to change the mode.</li>
+                  <li>Identify the appropriate patient mode based on age.
+                    <ul>
+                      <li>Adult 🡪 > 12 years old</li>
+                      <li>Paediatric 🡪 29 days to 12 years old</li>
+                      <li>Neonate 🡪 ≤ 28 days</li>
+                    </ul>
+                  </li>
+                </ul>
+              <h3>Recalibrating battery</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Place the battery into the charging dock.</li>
+                  <li>Press the Test button (hold up to 10s).</li>
+                  <li>Ensure the LED lights up over the “Test” icon.</li>
+                  <li>Leave it to calibrate for 12 hours (DO NOT REMOVE).</li>
+                  <li>Document on calibration monitoring sticker pasted on the battery.</li>
+                </ul>
+              <h3>Changing system date and time</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Turn on the ZOLL, navigate to and select the date and time field. </li>
+                  <li>Use the navigation keys to adjust the date and time. </li>
+                  <li>After setting the date and time, switch off the ZOLL unit for 2 minutes to allow the system to reset to a new treatment summary log.</li>
+                </ul>
+              <h3>Preparing chest and placing pads</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Shave any hair off the chest only for areas where defib pads will be placed.</li>
+                  <li>Dry the chest from any bodily fluids.</li>
+                  <li>Shift any necklace away from areas where defib pads will be applied.</li>
+                  <li>Remove any medicated patches.</li>
+                  <li>Place defib pads 4 fingers away from any pacemaker.</li>
+                  <li>Follow the instructions displayed on the defib pad packaging.</li>
+                  <li>Ensure the CPR indicator pad is on the bottom half of the patient's sternum. (Align the CPR indicator pad before applying the defib pads.)</li>
+                  <li>For patients less than 8y/o or weighing less than 25kg, use paediatric defib pads and make sure patient mode is set to paediatric.</li>
+                </ul>
+              <h3>Hazards of AED</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Wet surfaces/patient's body</li>
+                  <li>Metallic surfaces </li>
+                  <li>Flammable gases</li>
+                </ul>
+              <h3>Contraindications of AED</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Obviously dead:
+                    <ul>
+                      <li>Rigor Mortis</li>
+                      <li>Livor Mortis</li>
+                      <li>Injuries incompatible with life: Decapitation, Transected Torso, Decomposition</li>
+                    </ul>
+                  </li>
+                  <li>Obviously alive: Patient has pulse </li>
+                </ul>
+              <h3>Applying blood pressure cuffs</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Place the BP cuff 2-3 cm above the elbow.</li>
+                  <li>Position the “Artery Index Marker” over the brachial artery and wrap the cuff around the arm.</li>
+                  <li>Ensure the cuff is of the correct size: The artery index line should fall within the range shown on the outside of the cuff</li>
+                  <li>Suitable locations to take BP from: 
+                    <ul>
+                      <li>Adult: Upper arm</li>
+                      <li>Paediatric/neonatal: Thigh/upper arm</li>
+                    </ul>
+                  </li>
+                  <li>Able to avoid taking BP on arms with the following factors:
+                    <ul>
+                      <li>AV fistula</li>
+                      <li>Stroke: avoid weaker arm</li>
+                      <li>IV infusion/presence of IV cannula</li>
+                      <li>History of breast cancer/lymph node removal</li>
+                    </ul>
+                  </li>
+                </ul>
+              <h3>Setting automatic interval BP</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Use navigation keys to select the NIBP field on the screen</li>
+                  <li>Select “NIBP mode” 🡪 Select “Auto” 🡪 Up/Down arrow</li>
+                  <li>Select “NIBP Auto Mode Interval” 🡪 Select the appropriate timing
+                    <ul>
+                      <li>Stable patients: 15min</li>
+                      <li>Unstable patients: 5min</li>
+                    </ul>
+                  </li>
+                </ul>
+              <h3>Viewing past NIBP/SpO2 readings</h3>
+              <div class="h3-container">
+                
+              </div>
+                <ul>
+                  <li>Press the “Display/Home” button to display the Trends window. </li>
+                  <li>Highlight the “Navigate here to scroll through trends” field at the bottom of the Trends window, then press “Select”.</li>
+                  <li>Use navigation keys to scroll through past readings.</li>
+                </ul>
+              <h3>Printing trend summary</h3>
+                <ul>
+                  <li>Press the “Back” button on the bottom left of the screen</li>
+                  <li>Press the “LOG” button</li>
+                  <li>Press the “Print Trends” button and select the trend to print.</li>
+                </ul>
+              <h3>Performing 12-lead ECG</h3>
+                <ul>
+                  <li>LA/RA: below collar bone, meaty area</li>
+                  <li>LL/RL: below ribcage, away from stomach</li>
+                  <li>V1: 4th intercostal space, right sternal border</li>
+                  <li>V2: 4th intercostal space, left sternal border</li>
+                  <li>V4: 5th intercostal space, midclavicular line</li>
+                  <li>V3: in between V2 and V4</li>
+                  <li>V6: 5th intercostal space, mid-axillary line</li>
+                  <li>V5: in between V4 and V6</li>
+                  <li>Place limb and chest leads onto the patient.</li>
+                  <li>Connect the 12-lead cable to the 4-lead cable in the correct orientation.</li>
+                  <li>Select the 12-lead monitoring screen.</li>
+                  <li>Input patient information using quick access keys.</li>
+                  <li>Instruct the patient to stay still for the 12-lead snapshot.</li>
+                  <li>Acquire the 12-lead snapshot when ECG stabilises.</li>
+                </ul>
+              <h3>Transmitting ECG to hospitals</h3>
+                <ul>
+                  <li>Follow the same steps from the Transmission Test, except choose the desired hospital instead of  “3rd Div Test”</li>
+                </ul>
+              <h3>Changing lead displayed on screen</h3>
+                <ul>
+                  <li>Use the “Lead” quick access key to toggle between all leads</li>
+                  <li>Alternatively, use navigation keys to select the “Lead” field to change the lead displayed.</li>
+                </ul>
+          <h2>General Troubleshooting</h2>
+              <h3>Troubleshooting SpO2 errors</h3>
+                <ul>
+                  <li>“Check Sensor”:</li>
+                    <ul>
+                      <li>The sensor is not connected to ZOLL</li>
+                      <li>Poor contact between the sensor and finger</li>
+                    </ul>
+                  <li>Factors that could cause inaccurate readings:
+                    <ul>
+                      <li>Cold fingers: Rub to warm up</li>
+                      <li>Nail polish: Place sensor sideways</li>
+                      <li>CO/CN poisoning: Nil</li>
+                      <li>Movement of fingers: Hold to stabilise</li>
+                      <li>Poor perfusion: Avoid taking BP on the same side</li>
+                    </ul>
+                  </li>
+                </ul>
+              <h3>Troubleshooting BP errors</h3>
+                <ul>
+                  <li>Inaccurate BP, showing the artefact sign. Common causes:
+                    <ul>
+                      <li>Movement</li>
+                      <li>Incorrect cuff size</li>
+                    </ul>
+                  </li>
+                  <li>“Reading Failed” 🡪 ZOLL is unable to detect blood pressure (Readjust cuff OR check radial pulse)</li>
+                  <li>“Air Leak” 🡪 Check for leak on BP cuff, hose, and points of connection</li>
+                </ul>
+              <h3>Troubleshooting ECG errors</h3>
+                <ul> 
+                  <li>“Lead fault”:</li>
+                    <ul>
+                      <li>Lead is detached from or in poor contact with the patient's body.</li>
+                      <li>ECG cable is detached.</li>
+                    </ul>
+                  <li>Artefacts/Shaky ECG lines:</li>
+                    <ul>
+                      <li>Patient is moving: Avoid placing 4-lead on the body for breathless patients</li>
+                      <li>Poor contact between the electrode and patient's body due to sweat, hair, air pockets, or the lack of gel</li>
+                      <li>Movement of cables due to wind</li>
+                      <li>Leads are placed inaccurately onto bony regions of the patient's body</li>
+                    </ul>
+                </ul>
+              <h3>Troubleshooting failed transmission</h3>
+                <ul>
+                  <li>Going to an open space to transmit</li>
+                  <li>Change the modem's extension cable</li>
+                  <li>Connect the modem directly to the ZOLL</li>
+                  <li>Check if the SIM card is present inside the modem</li>
+                  <li>If the problem persists, inform the paramedic in charge and Equipment IC, then submit the Equipment Service Report accordingly
+                  </li>
+                </ul>
       </div>
     </div>
+  </main>
 
     <!-- FOOTER -->
     <div class="footer-container" draggable="false">
