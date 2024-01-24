@@ -202,7 +202,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .show-sidenav {
-    width: 200px !important; 
     border-left: solid #6543ff 1px;
  }
 

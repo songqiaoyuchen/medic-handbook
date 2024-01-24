@@ -2,22 +2,24 @@ window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
 })
 
-function toggleNav(self) {
-    if(document.getElementById("sideNav").style.width === "0px"){
-      const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-      const body = document.body;
-      body.style.position = 'fixed';
-      body.style.top = `-${scrollY}`;
-    }else{
-      const body = document.body;
-      const scrollY = body.style.top;
-      body.style.position = '';
-      body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    }
-    self.classList.toggle("change");
-    document.getElementById("sideNav").classList.toggle("show-sidenav");
+function toggleNav(x) {
+  if(document.getElementById("sideNav").style.width === "0px"){
+    document.getElementById("sideNav").style.width = "200px";
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+  }else{
+    document.getElementById("sideNav").style.width = "0px";
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
+  document.getElementById("sideNav").classList.toggle("show-sidenav");
+  x.classList.toggle("change");
+}
 
   function toggleRefDropdown() {
     if(document.getElementById("refDropdown").style.height === "175.56px"){
