@@ -84,6 +84,15 @@ a {
 }
 
 /* DROPDOWNS */
+.navbar-toggler {
+    border-radius: 2%;
+    --bs-navbar-toggler-padding-x: 0.2rem;
+    --bs-navbar-toggler-padding-y: 0.2rem;
+    --bs-border-width: 0;
+    cursor: pointer;
+}
+
+/* DROPDOWNS */
 .dropdown-content {
     padding: 8px 16px;
     display: none;
@@ -564,15 +573,6 @@ li {
 
     .navbar-brand {
         padding-top: 0px;
-    }
-
-    #brand {
-        height: 0px;
-        width: 0px;
-        padding: 16px;
-        background-image: url(./assets/icons/browser.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .search-bar {
