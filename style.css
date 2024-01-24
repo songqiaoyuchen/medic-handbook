@@ -187,13 +187,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     z-index: 2; 
     top: 65.19px; 
     right: 0;
-    background-color: #10073d; 
+    background-color: #08082b; 
     overflow-x: hidden; 
     transition: 0.3s; 
 }
 
 .show-sidenav {
-    width: 200px; 
     border-left: solid #6543ff 1px;
  }
 
