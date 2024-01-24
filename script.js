@@ -20,26 +20,26 @@ function toggleNav(self) {
   }
 
   function toggleRefDropdown() {
-    if(document.getElementById("refDropdown").style.height === "0px"){
-      document.getElementById("refDropdown").style.height = "175.56px"
+    if(document.getElementById("refDropdown").style.height === "175.56px"){
+      document.getElementById("refDropdown").style.height = "0px"
     }else{
-      document.getElementById("refDropdown").style.height = "0px";
+      document.getElementById("refDropdown").style.height = "175.56px";
     }
   }
 
   function toggleGuideDropdown() {
-    if(document.getElementById("guideDropdown").style.height === "0px"){
-      document.getElementById("guideDropdown").style.height = "175.56px"
+    if(document.getElementById("guideDropdown").style.height === "175.56px"){
+      document.getElementById("guideDropdown").style.height = "0px"
     }else{
-      document.getElementById("guideDropdown").style.height = "0px";
+      document.getElementById("guideDropdown").style.height = "175.56px";
     }
   }
 
   function toggleAdminDropdown() {
-    if(document.getElementById("adminDropdown").style.height === "0px"){
-      document.getElementById("adminDropdown").style.height = "113px"
+    if(document.getElementById("adminDropdown").style.height === "122.38px"){
+      document.getElementById("adminDropdown").style.height = "0px"
     }else{
-      document.getElementById("adminDropdown").style.height = "0px";
+      document.getElementById("adminDropdown").style.height = "122.38px";
     }
   }
 
