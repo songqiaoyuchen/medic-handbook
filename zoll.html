@@ -64,20 +64,20 @@
 
   <!-- SIDENAV -->
   <div id="sideNav" class="sidenav" style="width: 0px;">
-    <div class="dropdown-btn nav-link" onclick="toggleDropdown1(this)">References</div>
-    <div id="firstDrop" class="dropdown-container" style="height: 113px;">
+    <div class="dropdown-btn nav-link" onclick="toggleRefDropdown()">References</div>
+    <div id="refDropdown" class="dropdown-container" style="height: 175.56px;">
       <a class="sub-link" href="#">Gen6 Checklist</a>
       <a class="sub-link" href="#">Gen7 Checklist</a>
       <a class="sub-link" href="#">Equipment List</a>
     </div>
-    <a class="dropdown-btn nav-link" onclick="toggleDropdown2(this)">Guides</a>
-    <div id="secondDrop" class="dropdown-container" style="height: 113px;">
+    <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown()">Guides</a>
+    <div id="guideDropdown" class="dropdown-container" style="height: 175.56px;">
       <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
       <a class="sub-link" href="#">Blood Glucometer</a>
       <a class="sub-link" href="#">Laerdal Suction Unit</a>
     </div>
-    <a class="dropdown-btn nav-link" onclick="toggleDropdown3(this)">Admin</a>
-    <div id="thirdDrop" class="dropdown-container" style="height: 113px;">
+    <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">Admin</a>
+    <div id="adminDropdown" class="dropdown-container" style="height: 113px;">
       <a class="sub-link" href="#">Roster</a>
       <a class="sub-link" href="#">Leaves</a>
     </div>
@@ -89,17 +89,21 @@
   <main>
     <div class="main-container">
       <!-- DIRECTORY -->
-      <div class="directory">
-        <a class="nav-link">ZOLL X Series</a>
-        <a class="nav-link">Basic Information</a>
-          <a class="sub-link">Front Panel</a>
-          <a class="sub-link">Display Screen</a>
-        <a class="nav-link">First Parade Task</a>
-          <a class="sub-link">ZOLL Battery Check</a>
-          <a class="sub-link">ZOLL Power-on Test</a>
-        <a class="nav-link">Proficiency Requirement</a>
-        <a class="nav-link">General Troubleshooting</a>
-        <a class="nav-link">Item Checklist</a>
+      <div id="pageDir" class="directory">
+        <div class="nav-link">ZOLL X Series</div>
+        <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown()">Basic Information</a>
+        <div id="guideDropdown" class="dropdown-container" style="height: 113px;">
+          <a class="sub-link" href="./zoll.html">Front Panel</a>
+          <a class="sub-link" href="#">Display Screen</a>
+          <a class="sub-link" href="#">Quick Access Keys</a>
+        </div>
+        <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">First Parade Task</a>
+        <div id="adminDropdown" class="dropdown-container" style="height: 113px;">
+          <a class="sub-link" href="#">ZOLL Battery Check</a>
+          <a class="sub-link" href="#">ZOLL Power-on Test</a>
+        </div>
+        <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">Proficiency Requirement</a>
+        <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">General Troubleshooting</a>
       </div>
 
       <!-- ARTICLE -->
@@ -109,112 +113,113 @@
           <h2>General Information</h2>
             <div class="h2-container">
               <h3>Front Panel</h3>
-                <div class="h3-container">
-                  <img class="illust" src="./assets/images/zoll.png">
-                </div>
+              <div class="h3-container">
+                <img class="illust" src="./assets/images/zoll.png">
+              </div>
               <h3>Display Screen</h3>
-                <div class="h3-container">
-                  <img class="illust" src="./assets/images/screen.png">
-                </div>
+              <div class="h3-container">
+                <img class="illust" src="./assets/images/screen.png">
+              </div>
               <h3>Quick Access Keys</h3>
-                <div class="h3-container">
-                  <div class="table-container">
-                    <div class="table-cell">
-                      <div class="bold">12 lead</div>
-                      <img src="./assets/images/12lead.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Displays the 12-lead monitoring screen.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Print</div>
-                      <img src="./assets/images/print.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Starts or stops a continuous chart print.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Alarms</div>
-                      <img src="./assets/images/alarm.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Displays the Limits option to allow the user to view/set all parameter
-                        alarm limits.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Log</div>
-                      <img src="./assets/images/log.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Opens the Log Control panel.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Setup</div>
-                      <img src="./assets/images/setup.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Displays the Setup menu to allow the user to access past readiness tests.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Treatment Summary</div>
-                      <img src="./assets/images/treatment_summary.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Displays treatment summary cases, which you can print.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Print Trends</div>
-                      <img src="./assets/images/print_trends.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Prints the trends that are displayed in the Trend Summary window.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Transfer Log</div>
-                      <img src="./assets/images/transfer_log.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Transfers the current data in the log to a USB drive.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Acquire</div>
-                      <img src="./assets/images/lead.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>the ECG input source for the first waveform trace.</div> 
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Stop Acquisition</div>
-                      <img src="./assets/images/stop_acquisition.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Stops acquisition of 12-lead data.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Patient Information</div>
-                      <img src="./assets/images/patient_info.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Allows you to enter information to accompany 12-lead data: patient
-                        name, age, gender, and ID.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">12-Lead Review</div>
-                      <img src="./assets/images/12lead_review.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Reviews all your 12-lead captured data.</div>
-                    </div>
-                    <div class="table-cell">
-                      <div class="bold">Transmit</div>
-                      <img src="./assets/images/transmit.png" class="qak">
-                    </div>
-                    <div class="table-cell">
-                      <div>Transmits 12-lead data.</div>
-                    </div>
+              <div class="h3-container">
+                <div class="table-container">
+                  <div class="table-cell">
+                    <div class="bold">12 lead</div>
+                    <img src="./assets/images/12lead.png" class="qak">
                   </div>
-                </div>  
+                  <div class="table-cell">
+                    <div>Displays the 12-lead monitoring screen.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Print</div>
+                    <img src="./assets/images/print.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Starts or stops a continuous chart print.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Alarms</div>
+                    <img src="./assets/images/alarm.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Displays the Limits option to allow the user to view/set all parameter
+                      alarm limits.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Log</div>
+                    <img src="./assets/images/log.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Opens the Log Control panel.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Setup</div>
+                    <img src="./assets/images/setup.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Displays the Setup menu to allow the user to access past readiness tests.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Treatment Summary</div>
+                    <img src="./assets/images/treatment_summary.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Displays treatment summary cases, which you can print.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Print Trends</div>
+                    <img src="./assets/images/print_trends.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Prints the trends that are displayed in the Trend Summary window.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Transfer Log</div>
+                    <img src="./assets/images/transfer_log.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Transfers the current data in the log to a USB drive.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Acquire</div>
+                    <img src="./assets/images/lead.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>the ECG input source for the first waveform trace.</div> 
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Stop Acquisition</div>
+                    <img src="./assets/images/stop_acquisition.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Stops acquisition of 12-lead data.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Patient Information</div>
+                    <img src="./assets/images/patient_info.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Allows you to enter information to accompany 12-lead data: patient
+                      name, age, gender, and ID.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">12-Lead Review</div>
+                    <img src="./assets/images/12lead_review.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Reviews all your 12-lead captured data.</div>
+                  </div>
+                  <div class="table-cell">
+                    <div class="bold">Transmit</div>
+                    <img src="./assets/images/transmit.png" class="qak">
+                  </div>
+                  <div class="table-cell">
+                    <div>Transmits 12-lead data.</div>
+                  </div>
+                </div>
+              </div>  
             </div>
+            
           <!-- FIRST PARADE TASK -->
           <h2>First Parade Tasks</h2>
             <div class="h2-container">
