@@ -593,6 +593,10 @@ li {
     .sidenav {
         top: 53.38px;
     }
+    
+    main-sidenav {
+        top: 70.19px !important
+    }
 
     .hero-container {
         display: flex;
