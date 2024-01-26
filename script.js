@@ -3,7 +3,7 @@ window.addEventListener('scroll', () => {
 })
 
 function toggleNav(x) {
-  if(document.getElementById("sideNav").style.width === "0px"){
+  if(document.getElementById("sideNav").style.width === "0px" || !document.getElementById("sideNav").style.width) {
     document.getElementById("sideNav").style.width = "200px";
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
@@ -19,6 +19,24 @@ function toggleNav(x) {
   }
   document.getElementById("sideNav").classList.toggle("show-sidenav");
   x.classList.toggle("change");
+}
+
+function toggleDir(x) {
+  if (document.getElementById("pageDir").style.width === "0px" || !document.getElementById("pageDir").style.width) {
+    document.getElementById("pageDir").style.width = "auto";
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+  }else{
+    document.getElementById("pageDir").style.width = "0px";
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  }
+  document.getElementById("pageDir").classList.toggle("show-dir");
 }
 
   function toggleRefDropdown() {
