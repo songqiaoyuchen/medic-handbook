@@ -18,10 +18,10 @@
   <!-- NAVBAR -->
   <nav class="navbar fixed-top navbar-expand-md">
     <div class="container-fluid">
-      <a class="navbar-brand hidden-brand" href="./index.html"><img src="./assets/icons/brand.svg" style="height: 30px;"></a>
-      <div class="dir-toggler" onclick="toggleDir(this)"><img src="./assets/icons/bookmarks.svg" style="height: 24px;"></div>
-      <a class="mobile-brand" href="./index.html"><img src="./assets/icons/heart-pulse.svg" style="height: 25px;"></a>
-      <div class="navbar-toggler" onclick="toggleNav(this)">
+      <a class="navbar-brand hidden-mobile" href="./index.html"><img src="./assets/icons/brand.svg" style="height: 30px;"></a>
+      <div class="dir-toggler" onclick="toggleDir(this)"><img id="dirToggler" src="./assets/icons/bookmarks.svg" style="height: 24px;"></div>
+      <a class="mobile-brand" href="./index.html" style="align-self: center;"><img src="./assets/icons/heart-pulse.svg" style="height: 25px;"></a>
+      <div id="navbarToggler" class="navbar-toggler" onclick="toggleNav(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -54,7 +54,6 @@
           <a class="nav-link" href="#">About</a>
         </div>
       </div>
-      <!-- SEARCH -->
       <div class="search-bar">
         <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Not Available" aria-label="Search">
@@ -79,19 +78,20 @@
       <a class="sub-link" href="#">Laerdal Suction Unit</a>
     </div>
     <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">Admin</a>
-    <div id="adminDropdown" class="dropdown-container" style="height: 113px;">
+    <div id="adminDropdown" class="dropdown-container" style="height: 122.38px;">
       <a class="sub-link" href="#">Roster</a>
       <a class="sub-link" href="#">Leaves</a>
     </div>
     <a class="nav-link" href="#">Links</a>
     <a class="nav-link" href="#">About</a>
+    <a class="nav-link" style="height: 60px"></a>
   </div>
 
   <!-- MAIN -->
   <main>
     <div class="main-container">
       <!-- DIRECTORY -->
-      <div id="pageDir" class="directory">
+      <div id="pageDir" class="directory" style="width: 0px;">
         <div class="nav-link">ZOLL X Series</div>
         <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown()">Basic Information</a>
         <div id="guideDropdown" class="dropdown-container" style="height: 113px;">
@@ -116,11 +116,11 @@
             <div class="h2-container">
               <h3>Front Panel</h3>
               <div class="h3-container">
-                <img class="illust" src="./assets/images/zoll.png">
+                <img class="solo-illust" src="./assets/images/zoll.png">
               </div>
               <h3>Display Screen</h3>
               <div class="h3-container">
-                <img class="illust" src="./assets/images/screen.png">
+                <img class="solo-illust" src="./assets/images/screen.png">
               </div>
               <h3>Quick Access Keys</h3>
               <div class="h3-container">
@@ -256,7 +256,7 @@
                 <div class="h3-container">
                   <img src="./assets/images/zoll_battery.png" class="illust" id="zoll_battery">
                   <ul>
-                    <li>There should be at least <span class="yellow">2&#215; ZOLL batteries</span>  charged to a minimum of <span class="red">3hrs</span>.</li>
+                    <li>There should be at least <span class="yellow">2&#215; ZOLL batteries</span> charged to a minimum of <span class="red">3hrs</span> .</li>
                     <li>The battery should be able to be charged in the ambulance using either a auxillary power cable or a charger dock.</li>
                   </ul>                
                   <div>
@@ -275,8 +275,8 @@
                 <div class="h3-container">
                   <ol>
                     <li>Visual alarm indicators should all light up when ZOLL is powering on.</li>
-                    <li>The RFU indicator should show “Do not use” when powering on and “Ready” after powering on.</li>
-                    <li>Display screen should prompt “Self-Test Passed” on display screen after powering on.</li>
+                    <li>The RFU indicator should show <span class="bold">"Do Not Use"</span> when powering on and <span class="bold">"Ready"</span> after powering on.</li>
+                    <li>Display screen should prompt <span class="bold">"Self-Test Passed"</span> on display screen after powering on.</li>
                     <li>The time and date of the ZOLL should be synchronised with the ACES MDT.</li>
                   </ol>
                   <div class="table-container">
@@ -325,9 +325,9 @@
                   </div>
                   <ol>
                     <li>Connect the CPR Connector to the black self-test plug.</li>
-                    <li>Press the “Energy Select” button and select 30 joules.</li>
-                    <li>Press the “Charge” button and allow ZOLL to charge.</li>
-                    <li>Press the “Shock” button when the button lights up in orange.</li>
+                    <li>Press the <span class="bold">"Energy Select"</span> button and select 30 joules.</li>
+                    <li>Press the <span class="bold">"Charge"</span> button and allow ZOLL to charge.</li>
+                    <li>Press the <span class="bold">"Shock"</span> button when the button lights up in orange.</li>
                     <li>The test strip will be automatically printed. Check all tests are shown as pass.</li>
                   </ol>                  
                 </div>
@@ -335,7 +335,7 @@
               <h3>ZOLL SpO2 Check</h3>
                 <div class="h3-container">
                   <ul>
-                    <li>The <span class="yellow">SpO2 adaptor</span>, <span class="yellow">adult sensor</span> and <span class="yellow">paediatric sensor</span> should be all present.</li>
+                    <li>The <span class="yellow">SpO2 adaptor</span> , <span class="yellow">adult sensor</span> and <span class="yellow">paediatric sensor</span> should be all present.</li>
                     <li>The <span class="yellow">portable SpO2</span> should be present.</li>
                     <li>The cables should be clean and free from blood.</li>
                     <li>The cables should not be frayed.</li>
@@ -349,7 +349,7 @@
                     <li>There should not be any frayed cables.</li>
                     <li>The cables should be clean and free from blood and stains.</li>
                     <li>Four <span class="yellow">BP cuffs (sizes 9, 10, 11, 12)</span> should be present.</li>
-                    <li>Five <span class="yellow">neonatal BP cuffs (sizes 1, 2, 3, 4, 5)</span> and a compatible <span class="yellow">single-lumen BP hose</span> should be present inside the Maternity Bag.</li>
+                    <li>Five <span class="yellow">neonatal BP cuffs (sizes 1, 2, 3, 4, 5)</span> and a compatible <span class="yellow">single-lumen hose</span> should be present inside the Maternity Bag.</li>
                     <li>Apply the BP cuffs on yourself and perform BP measurements to check for leakage.</li>
                   </ul>                
                 </div>
@@ -368,10 +368,10 @@
               <h3>Transmission Test</h3>
                 <div class="h3-container">
                   <ol>
-                    <li>Press the "12-lead" quick access key to display 12-lead monitoring screen.</li>
-                    <li>Press the "Aquire" quick access key to capture an empty 12-lead snapshot.</li>
-                    <li>Press the “Transmit” quick access key and transmit to "3rd Div Test" with navigation keys.</li>
-                    <li>Ensure the screen displays “Transmission successful” and the green visual alarm indicator lights up.</li>
+                    <li>Press the <span class="bold">"12-lead"</span> quick access key to display 12-lead monitoring screen.</li>
+                    <li>Press the <span class="bold">"Aquire"</span> quick access key to capture an empty 12-lead snapshot.</li>
+                    <li>Press the <span class="bold">"Transmit"</span> quick access key and transmit to <span class="bold">"3rd Div Test"</span> with navigation keys.</li>
+                    <li>Ensure the screen displays <span class="bold">"Transmission successful"</span> and the green visual alarm indicator lights up.</li>
                   </ol>                
                 </div>
             </div>
@@ -381,134 +381,177 @@
             <div class="h2-container">
               <h3>Changing Patient Mode</h3>
                 <div class="h3-container">
-                  <p>It is important to select the correct patient mode as it will affect the initial Cuff Inflation Target (CIT) pressure and in turn affect the accuracy of BP reading.</p>
                   <div class="info-box">
                     <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
                     <div>
                       <ul class="inbox-list">
-                        <li>Adult mode: more than 12 years old</li>
-                        <li>Paediatric mode: 29 days to 12 years old</li>
-                        <li>Neonate mode: 28 days or less</li>
+                        <li>Adult: more than <span class="inbox-red">12 years</span> old</li>
+                        <li>Paediatric: <span class="inbox-red">29 days</span> to 12 years old</li>
+                        <li>Neonate: <span class="inbox-red">28 days</span> or less</li>
                       </ul>
                     </div>
                   </div>
-                  <ul>
-                    <li>Use navigation keys to select the patient mode field on the display screen.</li>
-                    <li>The default patient mode is set to “Adult”.</li>
+                  <p>It is important to select the correct patient mode as it will affect the initial Cuff Inflation Target (CIT) pressure which in turn will affect the accuracy of BP reading.</p>
+                  <ol>
+                    <li>Use navigation keys to select the <span class="bold">"Patient Mode"</span> field on the display screen.</li>
+                    <li>The default patient mode is set to <span class="bold">"Adult"</span>.</li>
                     <li>Change to the appropriate patient mode based on age.</li>
-                  </ul>
+                  </ol>
                 </div>
                   
-              <h3>Recalibrating battery</h3>
+              <h3>Recalibrating ZOLL Battery</h3>
               <div class="h3-container">
-                
+                <img class="illust" src="./assets/images/zoll_charger.png">
+                <div class="info-box">
+                  <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                  <div>Removing the battery will end the 12hrs recalibration process early. Therefore, it is always a good practice to leave a note indicating the start and end timing of recalibration.</div>
+                </div>
+                <ol>
+                  <li>The <span class="bold">"Recalibration"</span> icon on a ZOLL battery lights up, prompting for a recalibration.</li>
+                  <li>Insert the battery pack into the charging bay.</li>
+                  <li>Press and hold the <span class="bold">"Test Button"</span> until <span class="bold">"Test"</span> icon lights up.</li>
+                  <li>Leave the battery to calibrate for <span class="red">12hrs</span> on the charging bay.</li>
+                  <li>When the battery is fully charged and has passed a factory-configured minimum capacity test, the <span class="bold">"Ready"</span> icon will light up. If the charger determines that the battery has insufficient capacity, the <span class="bold">"Fault"</span> icon will light up.</li>
+                </ol>
               </div>
-                <ul>
-                  <li>Place the battery into the charging dock.</li>
-                  <li>Press the Test button (hold up to 10s).</li>
-                  <li>Ensure the LED lights up over the “Test” icon.</li>
-                  <li>Leave it to calibrate for 12 hours (DO NOT REMOVE).</li>
-                  <li>Document on calibration monitoring sticker pasted on the battery.</li>
-                </ul>
-              <h3>Changing system date and time</h3>
+                
+              <h3>Changing System Date and Time</h3>
               <div class="h3-container">
-                
+                <div class="warning-box">
+                  <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                  <div>You are <span class="inbox-red">not allowed</span> to change the system date and time without permission from the paramedic in charge.</div>
+                </div>
+                <ol>
+                  <li>Select <span class="bold">"Date and Time"</span> field on the display screen with navigation keys. </li>
+                  <li>Specify the date and time by navigating to the respective fields and adjusting as necessary. </li>
+                  <li>Select the <span class="bold">"Set Date and Time"</span> field to apply changes.</li>
+                </ol>
               </div>
-                <ul>
-                  <li>Turn on the ZOLL, navigate to and select the date and time field. </li>
-                  <li>Use the navigation keys to adjust the date and time. </li>
-                  <li>After setting the date and time, switch off the ZOLL unit for 2 minutes to allow the system to reset to a new treatment summary log.</li>
-                </ul>
-              <h3>Preparing chest and placing pads</h3>
+                
+              <h3>Placing AED Pads</h3>
+              <div class="warning-box">
+                <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                <div><span class="bold">Hazard of AED</span>
+                  <ul class="inbox-list">
+                    <li>Wet surfaces/patient's body</li>
+                    <li>Metallic surfaces </li>
+                    <li>Flammable gases</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                <div><span class="bold">Contraindications of AED</span>
+                  <ul class="inbox-list">
+                    <li>Obviously dead:
+                      <ul>
+                        <li>Rigor Mortis</li>
+                        <li>Livor Mortis</li>
+                        <li>Injuries incompatible with life: Decapitation, Transected Torso, Decomposition</li>
+                      </ul>
+                    </li>
+                    <li>Obviously alive: Patient has pulse </li>
+                  </ul>
+                </div>
+              </div>
               <div class="h3-container">
-                
-              </div>
+                <h4>Preparing the chest</h4>
+                <div class="warning-box">
+                  <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                  <div>Excessive hair can inhibit good contact. Poor adherence and/or air under the electrodes can lead to the possibility of <span class="inbox-red">arcing</span> and <span class="inbox-red">skin burns</span>.</div>
+                </div>
                 <ul>
                   <li>Shave any hair off the chest only for areas where defib pads will be placed.</li>
                   <li>Dry the chest from any bodily fluids.</li>
                   <li>Shift any necklace away from areas where defib pads will be applied.</li>
                   <li>Remove any medicated patches.</li>
                   <li>Place defib pads 4 fingers away from any pacemaker.</li>
-                  <li>Follow the instructions displayed on the defib pad packaging.</li>
-                  <li>Ensure the CPR indicator pad is on the bottom half of the patient's sternum. (Align the CPR indicator pad before applying the defib pads.)</li>
-                  <li>For patients less than 8y/o or weighing less than 25kg, use paediatric defib pads and make sure patient mode is set to paediatric.</li>
                 </ul>
-              <h3>Hazards of AED</h3>
-              <div class="h3-container">
-                
+                <h4>Applying electrodes</h4>
+                <div class="info-box">
+                  <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                  <div>When <span class="inbox-red">corpuls</span> is used for chest compressions, the <span class="inbox-red">CPR indicator pad</span> is to be torn off and placed <span class="inbox-red">below</span> the corpuls stamp. This is because the corpuls piston is unable to keep its position on the compression point due to the slippery surface of the indicator pad, causing injuries to the patient's ribcage.</div>
+                </div>
+                <div class="info-box">
+                  <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                  <div>For patients less than <span class="inbox-red">8y/o</span> or weighing less than <span class="inbox-red">25kg</span>, use <span class="inbox-red">paediatric</span> defib pads and make sure patient mode is set to paediatric.</div>
+                </div>
+                <ol>
+                  <li>Align the CPR indicator pad on the <span class="red">bottom half of sternum</span> .</li>
+                  <li>Apply one edge of the electrode securely to the patient.</li>
+                  <li>Roll the electrode smoothly from that edge to the other. Be careful not to trap any pockets of air between the gel and skin.</li>
+                </ol>
               </div>
-                <ul>
-                  <li>Wet surfaces/patient's body</li>
-                  <li>Metallic surfaces </li>
-                  <li>Flammable gases</li>
-                </ul>
-              <h3>Contraindications of AED</h3>
-              <div class="h3-container">
                 
-              </div>
-                <ul>
-                  <li>Obviously dead:
-                    <ul>
-                      <li>Rigor Mortis</li>
-                      <li>Livor Mortis</li>
-                      <li>Injuries incompatible with life: Decapitation, Transected Torso, Decomposition</li>
-                    </ul>
-                  </li>
-                  <li>Obviously alive: Patient has pulse </li>
-                </ul>
-              <h3>Applying blood pressure cuffs</h3>
+              <h3>Applying Blood Pressure Cuffs</h3>
               <div class="h3-container">
-                
-              </div>
-                <ul>
-                  <li>Place the BP cuff 2-3 cm above the elbow.</li>
-                  <li>Position the “Artery Index Marker” over the brachial artery and wrap the cuff around the arm.</li>
-                  <li>Ensure the cuff is of the correct size: The artery index line should fall within the range shown on the outside of the cuff</li>
-                  <li>Suitable locations to take BP from: 
-                    <ul>
-                      <li>Adult: Upper arm</li>
-                      <li>Paediatric/neonatal: Thigh/upper arm</li>
-                    </ul>
-                  </li>
-                  <li>Able to avoid taking BP on arms with the following factors:
-                    <ul>
+                <div class="warning-box">
+                  <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                  <div>
+                    <div>Avoid taking BP on arms with the following factors:</div>
+                    <ul class="inbox-list">
                       <li>AV fistula</li>
-                      <li>Stroke: avoid weaker arm</li>
+                      <li>Stroke: avoid the weaker arm</li>
                       <li>IV infusion/presence of IV cannula</li>
                       <li>History of breast cancer/lymph node removal</li>
                     </ul>
-                  </li>
-                </ul>
-              <h3>Setting automatic interval BP</h3>
-              <div class="h3-container">
-                
-              </div>
+                  </div>
+                </div>
+                <ol>
+                  <li>Ensure the limb to be used for measurement is relaxed and extended</li>
+                  <li>Place the BP cuff 2-3 cm above the elbow.</li>
+                  <li>Position the <span class="red">"Artery Index Marker"</span> over the <span class="red">brachial artery</span> and wrap the cuff around the arm.</li>
+                  <li>Ensure the cuff is of the correct size: The "Artery Index Marker" should fall within the range shown on the outside of the cuff.</li>
+                  
+                </ol>
+                <h4>Applying neonate cuffs</h4>
                 <ul>
-                  <li>Use navigation keys to select the NIBP field on the screen</li>
-                  <li>Select “NIBP mode” 🡪 Select “Auto” 🡪 Up/Down arrow</li>
-                  <li>Select “NIBP Auto Mode Interval” 🡪 Select the appropriate timing
+                  <li>Attach the <span class="yellow">single lumen hose</span> to the ZOLL to use neonate cuffs.</li>
+                  <li>You may apply the BP cuff on the <span class="red">thigh</span> of neonate patients.</li>
+                </ul>
+                <div class="square-grid">
+                  <img class="table-cell fig" src="./assets/images/neonate_hose1.png">
+                  <img class="table-cell fig" src="./assets/images/neonate_hose2.png">
+                </div>     
+              </div>
+                
+              <h3>Setting Automatic Interval BP</h3>
+              <div class="h3-container">
+                <img class="illust" src="./assets/images/bp_panel.png">
+                <ul>
+                  <li>Bring out the NIBP Control Panel by selecting the <span class="bold">"NIBP"</span> field on the display screen.</li>
+                  <li>Select "NIBP Mode" and use "Up/Down Arrow" buttons to toggle between "Auto" and "Mannual".</li>
+                  <li>Select “NIBP Auto Mode Interval” and choose the appropriate timing:
                     <ul>
+                      <li><span class="red">Unstable</span> patients: <span class="red">5min</span></li>
                       <li>Stable patients: 15min</li>
-                      <li>Unstable patients: 5min</li>
                     </ul>
                   </li>
                 </ul>
-              <h3>Viewing past NIBP/SpO2 readings</h3>
-              <div class="h3-container">
-                
               </div>
+                
+              <h3>Viewing Past NIBP/SpO2 Readings</h3>
+              <div class="h3-container">
                 <ul>
-                  <li>Press the “Display/Home” button to display the Trends window. </li>
-                  <li>Highlight the “Navigate here to scroll through trends” field at the bottom of the Trends window, then press “Select”.</li>
+                  <li>Press the <span class="bold">"Display/Home"</span> button until Trends Status window is displayed.</li>
+                  <li>Select the "Navigate here to scroll through trends" field at the bottom of the Trends window.</li>
                   <li>Use navigation keys to scroll through past readings.</li>
                 </ul>
-              <h3>Printing trend summary</h3>
+              </div>
+                
+              <h3>Printing Trend Summary</h3>
+              <div class="h3-container">
                 <ul>
-                  <li>Press the “Back” button on the bottom left of the screen</li>
-                  <li>Press the “LOG” button</li>
-                  <li>Press the “Print Trends” button and select the trend to print.</li>
+                  <li>Press the <span class="bold">"More/Back"</span> button on the bottom left of the screen</li>
+                  <li>Press the <span class="bold">"Log"</span> button</li>
+                  <li>Press the <span class="bold">"Print Trends"</span> button and select the trend to print.</li>
                 </ul>
+              </div>
+                
               <h3>Performing 12-lead ECG</h3>
+              <div class="h3-container">
+                <h4>ECG Landmarks</h4>
+                <img class="illust" src="./assets/images/landmarks.png">
                 <ul>
                   <li>LA/RA: below collar bone, meaty area</li>
                   <li>LL/RL: below ribcage, away from stomach</li>
@@ -518,18 +561,24 @@
                   <li>V3: in between V2 and V4</li>
                   <li>V6: 5th intercostal space, mid-axillary line</li>
                   <li>V5: in between V4 and V6</li>
+                </ul>
+                <h4>Acquiring 12-lead snapshot</h4>
+                <ol>
                   <li>Place limb and chest leads onto the patient.</li>
                   <li>Connect the 12-lead cable to the 4-lead cable in the correct orientation.</li>
-                  <li>Select the 12-lead monitoring screen.</li>
-                  <li>Input patient information using quick access keys.</li>
-                  <li>Instruct the patient to stay still for the 12-lead snapshot.</li>
-                  <li>Acquire the 12-lead snapshot when ECG stabilises.</li>
-                </ul>
+                  <li>Press the <span class="bold">"12-lead"</span> button to display 12-lead monitoring screen.</li>
+                  <li>Input patient's gender, age and last 4-digit NRIC using quick access keys.</li>
+                  <li>Instruct the patient to stay still for the duration of 12-lead snapshot.</li>
+                  <li>Press <span class="bold">"Acquire"</span> to capture the 12-lead snapshot when ECG stabilises.</li>
+                </ol>
+              </div>
+                
+                  
               <h3>Transmitting ECG to hospitals</h3>
                 <ul>
                   <li>Follow the same steps from the Transmission Test, except choose the desired hospital instead of  “3rd Div Test”</li>
                 </ul>
-              <h3>Changing lead displayed on screen</h3>
+              <h3>Configuring Waveform Display</h3>
                 <ul>
                   <li>Use the “Lead” quick access key to toggle between all leads</li>
                   <li>Alternatively, use navigation keys to select the “Lead” field to change the lead displayed.</li>

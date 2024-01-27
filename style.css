@@ -10,7 +10,7 @@
 html {
     font-size: 16px;
     font-weight: 400;
-    scrollbar-gutter: stable; 
+    scrollbar-gutter: stable;
     scroll-behavior: auto !important;
 }
 
@@ -54,6 +54,10 @@ a {
     z-index: 1;
     border-top: solid rgb(114, 83, 255) 1px;
     border-bottom: solid rgb(114, 83, 255) 1px;
+}
+
+.hidden-mobile {
+    display: block;
 }
 
 .navbar-nav {
@@ -194,11 +198,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     width: 0px; 
     position: fixed; 
     z-index: 2; 
-    top: 70.19px; 
+    top: 53.38px; 
     right: 0;
     background-color: #08082b; 
     overflow-x: hidden; 
     transition: 0.3s; 
+}
+
+.main-sidenav {
+    top: 70.19px;
 }
 
 .show-sidenav {
@@ -428,6 +436,12 @@ h4 {
 
 .inbox-list {
     margin: 0;
+    padding-left: 18px;
+    align-self: center;
+}
+
+.inbox-list li {
+    padding: 0px;
 }
 
 /* CONTAINERS */
@@ -529,12 +543,22 @@ li {
     padding: 8px;
 }
 
+.warning-box {
+    display: flex;
+    background-color: rgba(226, 64, 64, 0.2);
+    border: solid rgb(180, 53, 53) 2px;
+    border-left: solid #ff6a6a 5px;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    padding: 8px;
+}
+
 .icon-box {
-    padding-right: 8px;
+    padding: 0px 10px 0px 2px;
 }
 
 /* IMAGES */
-.illust {
+.solo-illust {
     width: 100%;
     border: solid #6543ff 3px;
     border-radius: 5px;
@@ -550,8 +574,10 @@ li {
     width: 100%;
 }
 
-
-#zoll_battery {
+.illust {
+    width: 100%;
+    border: solid #6543ff 3px;
+    border-radius: 5px;
     margin-bottom: 24px;
 }
 
@@ -578,7 +604,7 @@ li {
         border-bottom: solid rgb(114, 83, 255) 1px;
     }
 
-    .hidden-brand {
+    .hidden-mobile {
         display: none;
     }
 
@@ -588,10 +614,6 @@ li {
 
     .search-bar {
         display: none;
-    }
-
-    .sidenav {
-        top: 53.38px;
     }
 
     .hero-container {
@@ -648,7 +670,7 @@ li {
         transition: 0.3s; 
     }
 
-    .show-dir {
+    .show-dir-border {
         border-right: solid #6543ff 1px;
      }
 
@@ -674,23 +696,6 @@ li {
 
     h4 {
         font-size: 21px;
-    }
-}
-
-@media (max-width: 350px) {
-    #brand {
-        height: 0px;
-        width: 0px;
-        padding: 16px;
-        background-image: url(./assets/icons/browser.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-
-@media (min-width: 767px) {
-    .sidenav {
-        display: none;
     }
 }
 
