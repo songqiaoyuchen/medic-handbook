@@ -19,7 +19,9 @@
   <nav class="navbar fixed-top navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html"><img src="./assets/icons/brand.svg" style="height: 30px;"></a>
-      <div class="navbar-toggler" onclick="toggleNav(this)">
+      <div class="dir-toggler" onclick="toggleDir(this)"><img id="dirToggler" src="./assets/icons/bookmarks.svg" style="display: none;"></div>
+      <a class="mobile-brand" href="./index.html"><img src="./assets/icons/heart-pulse.svg" style="display: none;"></a>
+      <div id="navbarToggler" class="navbar-toggler" onclick="toggleNav(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -84,6 +86,9 @@
     <a class="nav-link" href="#">Links</a>
     <a class="nav-link" href="#">About</a>
   </div>
+
+  <!-- DIRECTORY FILLER FOR JS-->
+  <div id="pageDir" class="directory" style="width: 0px;"></div>
 
   <!-- MAIN -->
   <main draggable="false">
