@@ -78,5 +78,37 @@ function toggleAdminDropdown() {
   }
 }
 
+function toggleZollDropdown1() {
+  if(document.getElementById("zollDropdown1").style.height === "175.56px"){
+    document.getElementById("zollDropdown1").style.height = "0px"
+  }else{
+    document.getElementById("zollDropdown1").style.height = "175.56px";
+  }
+}
+
+function toggleZollDropdown2() {
+  if(document.getElementById("zollDropdown2").style.height === "494.69px"){
+    document.getElementById("zollDropdown2").style.height = "0px"
+  }else{
+    document.getElementById("zollDropdown2").style.height = "494.69px";
+  }
+}
+
+function toggleZollDropdown3() {
+  if(document.getElementById("zollDropdown3").style.height === "547.88px"){
+    document.getElementById("zollDropdown3").style.height = "0px"
+  }else{
+    document.getElementById("zollDropdown3").style.height = "547.88px";
+  }
+}
+
+function toggleZollDropdown4() {
+  if(document.getElementById("zollDropdown4").style.height === "228.75px"){
+    document.getElementById("zollDropdown4").style.height = "0px"
+  }else{
+    document.getElementById("zollDropdown4").style.height = "228.75px";
+  }
+}
+
   
   

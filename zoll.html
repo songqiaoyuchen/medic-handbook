@@ -29,29 +29,29 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <div class="dropdown">
-            <a class="nav-link dropbtn" href="#">References</a>
+            <a class="nav-link dropbtn">References</a>
             <div class="dropdown-content">
-              <a class="sub-link" href="#">Gen6 Checklist</a>
-              <a class="sub-link" href="#">Gen7 Checklist</a>
-              <a class="sub-link" href="#">Equipment List</a>
+              <a class="sub-link">Gen6 Checklist</a>
+              <a class="sub-link">Gen7 Checklist</a>
+              <a class="sub-link">Equipment List</a>
             </div>
           </div>
           <div class="dropdown">
             <a class="nav-link dropbtn current-menu">Guides</a>
             <div class="dropdown-content">
               <a class="sub-link current-page" href="./zoll.html">ZOLL X Series</a>
-              <a class="sub-link" href="#">Blood Glucometer</a>
-              <a class="sub-link" href="#">Laerdal Suction Unit</a>
+              <a class="sub-link">Blood Glucometer</a>
+              <a class="sub-link">Laerdal Suction Unit</a>
             </div>
           </div>
           <div class="dropdown">
-            <a class="nav-link dropbtn" href="#">Admin</a>
+            <a class="nav-link dropbtn">Admin</a>
             <div class="dropdown-content">
-              <a class="sub-link" href="#">Roster</a>
-              <a class="sub-link" href="#">Leaves</a>
+              <a class="sub-link">Roster</a>
+              <a class="sub-link">Leaves</a>
             </div>
           </div>
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link">About</a>
         </div>
       </div>
       <div class="search-bar">
@@ -67,23 +67,23 @@
   <div id="sideNav" class="sidenav" style="width: 0px;">
     <div class="dropdown-btn nav-link" onclick="toggleRefDropdown()" style="padding-top: 24px;">References</div>
     <div id="refDropdown" class="dropdown-container" style="height: 175.56px;">
-      <a class="sub-link" href="#">Gen6 Checklist</a>
-      <a class="sub-link" href="#">Gen7 Checklist</a>
-      <a class="sub-link" href="#">Equipment List</a>
+      <a class="sub-link">Gen6 Checklist</a>
+      <a class="sub-link">Gen7 Checklist</a>
+      <a class="sub-link">Equipment List</a>
     </div>
     <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown()">Guides</a>
     <div id="guideDropdown" class="dropdown-container" style="height: 175.56px;">
       <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
-      <a class="sub-link" href="#">Blood Glucometer</a>
-      <a class="sub-link" href="#">Laerdal Suction Unit</a>
+      <a class="sub-link">Blood Glucometer</a>
+      <a class="sub-link">Laerdal Suction Unit</a>
     </div>
     <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">Admin</a>
     <div id="adminDropdown" class="dropdown-container" style="height: 122.38px;">
-      <a class="sub-link" href="#">Roster</a>
-      <a class="sub-link" href="#">Leaves</a>
+      <a class="sub-link">Roster</a>
+      <a class="sub-link">Leaves</a>
     </div>
-    <a class="nav-link" href="#">Links</a>
-    <a class="nav-link" href="#">About</a>
+    <a class="nav-link">Links</a>
+    <a class="nav-link">About</a>
     <a class="nav-link" style="height: 60px"></a>
   </div>
 
@@ -92,20 +92,46 @@
     <div class="main-container">
       <!-- DIRECTORY -->
       <div id="pageDir" class="directory" style="width: 0px;">
-        <div class="nav-link">ZOLL X Series</div>
-        <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown()">Basic Information</a>
-        <div id="guideDropdown" class="dropdown-container" style="height: 113px;">
-          <a class="sub-link" href="./zoll.html">Front Panel</a>
-          <a class="sub-link" href="#">Display Screen</a>
-          <a class="sub-link" href="#">Quick Access Keys</a>
+        <div class="nav-link" style="padding-top: 24px;">ZOLL X Series</div>
+        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown1()">General Information</a>
+        <div id="zollDropdown1" class="dropdown-container" style="height: 175.56px">
+          <a class="sub-link">Front Panel</a>
+          <a class="sub-link">Display Screen</a>
+          <a class="sub-link">Quick Access Keys</a>
         </div>
-        <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">First Parade Task</a>
-        <div id="adminDropdown" class="dropdown-container" style="height: 113px;">
-          <a class="sub-link" href="#">ZOLL Battery Check</a>
-          <a class="sub-link" href="#">ZOLL Power-on Test</a>
+        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown2()">First Parade Task</a>
+        <div id="zollDropdown2" class="dropdown-container" style="height: 494.69px;">
+          <a class="sub-link">ZOLL Unit Check</a>
+          <a class="sub-link">ZOLL Battery Check</a>
+          <a class="sub-link">ZOLL Power-on Test</a>
+          <a class="sub-link">ZOLL AED Check</a>
+          <a class="sub-link">Defibrillator Short Test</a>
+          <a class="sub-link">ZOLL SpO2 Check</a>
+          <a class="sub-link">ZOLL NIBP Check</a>
+          <a class="sub-link">ZOLL ECG Check</a>
+          <a class="sub-link">Transmission Test</a>
         </div>
-        <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">Proficiency Requirement</a>
-        <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">General Troubleshooting</a>
+        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown3()">Proficiency Requirement</a>
+        <div id="zollDropdown3" class="dropdown-container" style="height: 547.88px;">
+          <a class="sub-link">Changing Patient Mode</a>
+          <a class="sub-link">Recalibrating ZOLL Battery</a>
+          <a class="sub-link">Changing System Date and Time</a>
+          <a class="sub-link">Placing AED Pads</a>
+          <a class="sub-link">Applying Blood Pressure Cuffs</a>
+          <a class="sub-link">Setting Automatic Interval BP</a>
+          <a class="sub-link">Viewing Past NIBP/SpO2 Readings</a>
+          <a class="sub-link">Printing Trend Summary</a>
+          <a class="sub-link">Performing 12-lead ECG</a>
+          <a class="sub-link">Transmitting ECG to Hospitals</a>
+        </div>
+        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown4()">General Troubleshooting</a>
+        <div id="zollDropdown4" class="dropdown-container" style="height: 228.75px;">
+          <a class="sub-link">Troubleshooting SpO2</a>
+          <a class="sub-link">Troubleshooting BP</a>
+          <a class="sub-link">Troubleshooting ECG</a>
+          <a class="sub-link">Troubleshooting Failed Transmission</a>
+        </div>
+        <a class="nav-link" style="height: 60px"></a>
       </div>
 
       <!-- ARTICLE -->
@@ -251,7 +277,6 @@
                     <li>The unit should not be past the servicing due date.</li>
                   </ul>
                 </div>
-
               <h3>ZOLL Battery Check</h3>
                 <div class="h3-container">
                   <img src="./assets/images/zoll_battery.png" class="illust" id="zoll_battery">
@@ -269,8 +294,6 @@
                     </div>
                   </div>
                 </div>                
-
-
               <h3>ZOLL Power-on Test</h3>
                 <div class="h3-container">
                   <ol>
@@ -299,7 +322,6 @@
                     </div>
                   </div>
                 </div>
-
               <h3>ZOLL AED Check</h3>
                 <div class="h3-container">
                   <ul>
@@ -316,7 +338,6 @@
                     <div class="table-cell">CPR Connector</div>
                   </div>          
                 </div>
-
               <h3>Defibrillator Short Test</h3>
                 <div class="h3-container">
                   <div class="info-box">
@@ -331,7 +352,6 @@
                     <li>The test strip will be automatically printed. Check all tests are shown as pass.</li>
                   </ol>                  
                 </div>
-
               <h3>ZOLL SpO2 Check</h3>
                 <div class="h3-container">
                   <ul>
@@ -341,8 +361,7 @@
                     <li>The cables should not be frayed.</li>
                     <li>Apply the SpO2 sensors to your finger and check that readings could be obtained from the ZOLL display screen.</li>
                   </ul>                  
-                </div>
-                
+                </div>                
               <h3>ZOLL NIBP Check</h3>
                 <div class="h3-container">
                   <ul>
@@ -352,8 +371,7 @@
                     <li>Five <span class="yellow">neonatal BP cuffs (sizes 1, 2, 3, 4, 5)</span> and a compatible <span class="yellow">single-lumen hose</span> should be present inside the Maternity Bag.</li>
                     <li>Apply the BP cuffs on yourself and perform BP measurements to check for leakage.</li>
                   </ul>                
-                </div>
-                
+                </div>                
               <h3>ZOLL ECG Check</h3>
                 <div class="h3-container">
                   <ul>
@@ -364,7 +382,6 @@
                     <li>There should be a shaver, gauze, and spare electrodes in the ECG compartment.</li>
                   </ul>                
                 </div>
-
               <h3>Transmission Test</h3>
                 <div class="h3-container">
                   <ol>
@@ -400,243 +417,275 @@
                 </div>
                   
               <h3>Recalibrating ZOLL Battery</h3>
-              <div class="h3-container">
-                <img class="illust" src="./assets/images/zoll_charger.png">
-                <div class="info-box">
-                  <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
-                  <div>Removing the battery will end the 12hrs recalibration process early. Therefore, it is always a good practice to leave a note indicating the start and end timing of recalibration.</div>
+                <div class="h3-container">
+                  <img class="illust" src="./assets/images/zoll_charger.png">
+                  <div class="info-box">
+                    <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                    <div>Removing the battery will end the 12hrs recalibration process early. Therefore, it is always a good practice to leave a note indicating the start and end timing of recalibration.</div>
+                  </div>
+                  <ol>
+                    <li>The <span class="bold">"Recalibration"</span> icon on a ZOLL battery lights up, prompting for a recalibration.</li>
+                    <li>Insert the battery pack into the charging bay.</li>
+                    <li>Press and hold the <span class="bold">"Test Button"</span> until <span class="bold">"Test"</span> icon lights up.</li>
+                    <li>Leave the battery to calibrate for <span class="red">12hrs</span> on the charging bay.</li>
+                    <li>When the battery is fully charged and has passed a factory-configured minimum capacity test, the <span class="bold">"Ready"</span> icon will light up. If the charger determines that the battery has insufficient capacity, the <span class="bold">"Fault"</span> icon will light up.</li>
+                  </ol>
                 </div>
-                <ol>
-                  <li>The <span class="bold">"Recalibration"</span> icon on a ZOLL battery lights up, prompting for a recalibration.</li>
-                  <li>Insert the battery pack into the charging bay.</li>
-                  <li>Press and hold the <span class="bold">"Test Button"</span> until <span class="bold">"Test"</span> icon lights up.</li>
-                  <li>Leave the battery to calibrate for <span class="red">12hrs</span> on the charging bay.</li>
-                  <li>When the battery is fully charged and has passed a factory-configured minimum capacity test, the <span class="bold">"Ready"</span> icon will light up. If the charger determines that the battery has insufficient capacity, the <span class="bold">"Fault"</span> icon will light up.</li>
-                </ol>
-              </div>
                 
               <h3>Changing System Date and Time</h3>
-              <div class="h3-container">
-                <div class="warning-box">
-                  <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
-                  <div>You are <span class="inbox-red">not allowed</span> to change the system date and time without permission from the paramedic in charge.</div>
+                <div class="h3-container">
+                  <div class="warning-box">
+                    <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                    <div>You are <span class="inbox-red">not allowed</span> to change the system date and time without permission from the paramedic in charge.</div>
+                  </div>
+                  <ol>
+                    <li>Select <span class="bold">"Date and Time"</span> field on the display screen with navigation keys. </li>
+                    <li>Specify the date and time by navigating to the respective fields and adjusting as necessary. </li>
+                    <li>Select the <span class="bold">"Set Date and Time"</span> field to apply changes.</li>
+                  </ol>
                 </div>
-                <ol>
-                  <li>Select <span class="bold">"Date and Time"</span> field on the display screen with navigation keys. </li>
-                  <li>Specify the date and time by navigating to the respective fields and adjusting as necessary. </li>
-                  <li>Select the <span class="bold">"Set Date and Time"</span> field to apply changes.</li>
-                </ol>
-              </div>
                 
               <h3>Placing AED Pads</h3>
-              <div class="warning-box">
-                <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
-                <div><span class="bold">Hazard of AED</span>
-                  <ul class="inbox-list">
-                    <li>Wet surfaces/patient's body</li>
-                    <li>Metallic surfaces </li>
-                    <li>Flammable gases</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="info-box">
-                <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
-                <div><span class="bold">Contraindications of AED</span>
-                  <ul class="inbox-list">
-                    <li>Obviously dead:
-                      <ul>
-                        <li>Rigor Mortis</li>
-                        <li>Livor Mortis</li>
-                        <li>Injuries incompatible with life: Decapitation, Transected Torso, Decomposition</li>
+                <div class="h3-container">
+                  <div class="warning-box">
+                    <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                    <div><span class="bold">Hazard of AED</span>
+                      <ul class="inbox-list">
+                        <li>Wet surfaces/patient's body</li>
+                        <li>Metallic surfaces </li>
+                        <li>Flammable gases</li>
                       </ul>
-                    </li>
-                    <li>Obviously alive: Patient has pulse </li>
+                    </div>
+                  </div>
+                  <div class="info-box">
+                    <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                    <div><span class="bold">Contraindications of AED</span>
+                      <ul class="inbox-list">
+                        <li>Obviously dead:
+                          <ul>
+                            <li>Rigor Mortis</li>
+                            <li>Livor Mortis</li>
+                            <li>Injuries incompatible with life: Decapitation, Transected Torso, Decomposition</li>
+                          </ul>
+                        </li>
+                        <li>Obviously alive: Patient has pulse </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h4>Preparing the chest</h4>
+                  <div class="warning-box">
+                    <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                    <div>Excessive hair can inhibit good contact. Poor adherence and/or air under the electrodes can lead to the possibility of <span class="inbox-red">arcing</span> and <span class="inbox-red">skin burns</span>.</div>
+                  </div>
+                  <ul>
+                    <li>Shave any hair off the chest only for areas where defib pads will be placed.</li>
+                    <li>Dry the chest from any bodily fluids.</li>
+                    <li>Shift any necklace away from areas where defib pads will be applied.</li>
+                    <li>Remove any medicated patches.</li>
+                    <li>Place defib pads 4 fingers away from any pacemaker.</li>
                   </ul>
+                  <h4>Applying electrodes</h4>
+                  <div class="info-box">
+                    <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                    <div>When <span class="inbox-red">corpuls</span> is used for chest compressions, the <span class="inbox-red">CPR indicator pad</span> is to be torn off and placed <span class="inbox-red">below</span> the corpuls stamp. This is because the corpuls piston is unable to keep its position on the compression point due to the slippery surface of the indicator pad, causing injuries to the patient's ribcage.</div>
+                  </div>
+                  <div class="info-box">
+                    <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                    <div>For patients less than <span class="inbox-red">8y/o</span> or weighing less than <span class="inbox-red">25kg</span>, use <span class="inbox-red">paediatric</span> defib pads and make sure patient mode is set to paediatric.</div>
+                  </div>
+                  <ol>
+                    <li>Align the CPR indicator pad on the <span class="red">bottom half of sternum</span> .</li>
+                    <li>Apply one edge of the electrode securely to the patient.</li>
+                    <li>Roll the electrode smoothly from that edge to the other. Be careful not to trap any pockets of air between the gel and skin.</li>
+                  </ol>
                 </div>
-              </div>
-              <div class="h3-container">
-                <h4>Preparing the chest</h4>
-                <div class="warning-box">
-                  <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
-                  <div>Excessive hair can inhibit good contact. Poor adherence and/or air under the electrodes can lead to the possibility of <span class="inbox-red">arcing</span> and <span class="inbox-red">skin burns</span>.</div>
-                </div>
-                <ul>
-                  <li>Shave any hair off the chest only for areas where defib pads will be placed.</li>
-                  <li>Dry the chest from any bodily fluids.</li>
-                  <li>Shift any necklace away from areas where defib pads will be applied.</li>
-                  <li>Remove any medicated patches.</li>
-                  <li>Place defib pads 4 fingers away from any pacemaker.</li>
-                </ul>
-                <h4>Applying electrodes</h4>
-                <div class="info-box">
-                  <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
-                  <div>When <span class="inbox-red">corpuls</span> is used for chest compressions, the <span class="inbox-red">CPR indicator pad</span> is to be torn off and placed <span class="inbox-red">below</span> the corpuls stamp. This is because the corpuls piston is unable to keep its position on the compression point due to the slippery surface of the indicator pad, causing injuries to the patient's ribcage.</div>
-                </div>
-                <div class="info-box">
-                  <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
-                  <div>For patients less than <span class="inbox-red">8y/o</span> or weighing less than <span class="inbox-red">25kg</span>, use <span class="inbox-red">paediatric</span> defib pads and make sure patient mode is set to paediatric.</div>
-                </div>
-                <ol>
-                  <li>Align the CPR indicator pad on the <span class="red">bottom half of sternum</span> .</li>
-                  <li>Apply one edge of the electrode securely to the patient.</li>
-                  <li>Roll the electrode smoothly from that edge to the other. Be careful not to trap any pockets of air between the gel and skin.</li>
-                </ol>
-              </div>
                 
               <h3>Applying Blood Pressure Cuffs</h3>
-              <div class="h3-container">
-                <div class="warning-box">
-                  <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
-                  <div>
-                    <div>Avoid taking BP on arms with the following factors:</div>
-                    <ul class="inbox-list">
-                      <li>AV fistula</li>
-                      <li>Stroke: avoid the weaker arm</li>
-                      <li>IV infusion/presence of IV cannula</li>
-                      <li>History of breast cancer/lymph node removal</li>
-                    </ul>
+                <div class="h3-container">
+                  <div class="warning-box">
+                    <div class="icon-box"><img src="./assets/icons/exclamation-triangle.svg" style="height: 21px;"></div>
+                    <div>
+                      <div>Avoid taking BP on arms with the following factors:</div>
+                      <ul class="inbox-list">
+                        <li>AV fistula</li>
+                        <li>Stroke: avoid the weaker arm</li>
+                        <li>IV infusion/presence of IV cannula</li>
+                        <li>History of breast cancer/lymph node removal</li>
+                      </ul>
+                    </div>
                   </div>
+                  <ol>
+                    <li>Ensure the limb to be used for measurement is relaxed and extended</li>
+                    <li>Place the BP cuff 2-3 cm above the elbow.</li>
+                    <li>Position the <span class="red">"Artery Index Marker"</span> over the <span class="red">brachial artery</span> and wrap the cuff around the arm.</li>
+                    <li>Ensure the cuff is of the correct size: The "Artery Index Marker" should fall within the range shown on the outside of the cuff.</li>
+                  </ol>
+                  <h4>Applying neonate cuffs</h4>
+                  <ul>
+                    <li>Attach the <span class="yellow">single lumen hose</span> to the ZOLL to use neonate cuffs.</li>
+                    <li>You may apply the BP cuff on the <span class="red">thigh</span> of neonate patients.</li>
+                  </ul>
+                  <div class="square-grid">
+                    <img class="table-cell fig" src="./assets/images/neonate_hose1.png">
+                    <img class="table-cell fig" src="./assets/images/neonate_hose2.png">
+                  </div>     
                 </div>
-                <ol>
-                  <li>Ensure the limb to be used for measurement is relaxed and extended</li>
-                  <li>Place the BP cuff 2-3 cm above the elbow.</li>
-                  <li>Position the <span class="red">"Artery Index Marker"</span> over the <span class="red">brachial artery</span> and wrap the cuff around the arm.</li>
-                  <li>Ensure the cuff is of the correct size: The "Artery Index Marker" should fall within the range shown on the outside of the cuff.</li>
-                  
-                </ol>
-                <h4>Applying neonate cuffs</h4>
-                <ul>
-                  <li>Attach the <span class="yellow">single lumen hose</span> to the ZOLL to use neonate cuffs.</li>
-                  <li>You may apply the BP cuff on the <span class="red">thigh</span> of neonate patients.</li>
-                </ul>
-                <div class="square-grid">
-                  <img class="table-cell fig" src="./assets/images/neonate_hose1.png">
-                  <img class="table-cell fig" src="./assets/images/neonate_hose2.png">
-                </div>     
-              </div>
                 
               <h3>Setting Automatic Interval BP</h3>
-              <div class="h3-container">
-                <img class="illust" src="./assets/images/bp_panel.png">
-                <ul>
-                  <li>Bring out the NIBP Control Panel by selecting the <span class="bold">"NIBP"</span> field on the display screen.</li>
-                  <li>Select "NIBP Mode" and use "Up/Down Arrow" buttons to toggle between "Auto" and "Mannual".</li>
-                  <li>Select “NIBP Auto Mode Interval” and choose the appropriate timing:
-                    <ul>
-                      <li><span class="red">Unstable</span> patients: <span class="red">5min</span></li>
-                      <li>Stable patients: 15min</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+                <div class="h3-container">
+                  <img class="illust" src="./assets/images/bp_panel.png">
+                  <ul>
+                    <li>Bring out the NIBP Control Panel by selecting the <span class="bold">"NIBP"</span> field on the display screen.</li>
+                    <li>Select "NIBP Mode" and use "Up/Down Arrow" buttons to toggle between "Auto" and "Mannual".</li>
+                    <li>Select “NIBP Auto Mode Interval” and choose the appropriate timing:
+                      <ul>
+                        <li><span class="red">Unstable</span> patients: <span class="red">5min</span></li>
+                        <li>Stable patients: 15min</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
                 
               <h3>Viewing Past NIBP/SpO2 Readings</h3>
-              <div class="h3-container">
-                <ul>
-                  <li>Press the <span class="bold">"Display/Home"</span> button until Trends Status window is displayed.</li>
-                  <li>Select the "Navigate here to scroll through trends" field at the bottom of the Trends window.</li>
-                  <li>Use navigation keys to scroll through past readings.</li>
-                </ul>
-              </div>
+                <div class="h3-container">
+                  <ul>
+                    <li>Press the <span class="bold">"Display/Home"</span> button until Trends Status window is displayed.</li>
+                    <li>Select the "Navigate here to scroll through trends" field at the bottom of the Trends window.</li>
+                    <li>Use navigation keys to scroll through past readings.</li>
+                  </ul>
+                </div>
                 
               <h3>Printing Trend Summary</h3>
-              <div class="h3-container">
-                <ul>
-                  <li>Press the <span class="bold">"More/Back"</span> button on the bottom left of the screen</li>
-                  <li>Press the <span class="bold">"Log"</span> button</li>
-                  <li>Press the <span class="bold">"Print Trends"</span> button and select the trend to print.</li>
-                </ul>
-              </div>
+                <div class="h3-container">
+                  <ul>
+                    <li>Press the <span class="bold">"More/Back"</span> button on the bottom left of the screen</li>
+                    <li>Press the <span class="bold">"Log"</span> button</li>
+                    <li>Press the <span class="bold">"Print Trends"</span> button and select the trend to print.</li>
+                  </ul>
+                </div>
                 
               <h3>Performing 12-lead ECG</h3>
-              <div class="h3-container">
-                <h4>ECG Landmarks</h4>
-                <img class="illust" src="./assets/images/landmarks.png">
-                <ul>
-                  <li>LA/RA: below collar bone, meaty area</li>
-                  <li>LL/RL: below ribcage, away from stomach</li>
-                  <li>V1: 4th intercostal space, right sternal border</li>
-                  <li>V2: 4th intercostal space, left sternal border</li>
-                  <li>V4: 5th intercostal space, midclavicular line</li>
-                  <li>V3: in between V2 and V4</li>
-                  <li>V6: 5th intercostal space, mid-axillary line</li>
-                  <li>V5: in between V4 and V6</li>
-                </ul>
-                <h4>Acquiring 12-lead snapshot</h4>
-                <ol>
-                  <li>Place limb and chest leads onto the patient.</li>
-                  <li>Connect the 12-lead cable to the 4-lead cable in the correct orientation.</li>
-                  <li>Press the <span class="bold">"12-lead"</span> button to display 12-lead monitoring screen.</li>
-                  <li>Input patient's gender, age and last 4-digit NRIC using quick access keys.</li>
-                  <li>Instruct the patient to stay still for the duration of 12-lead snapshot.</li>
-                  <li>Press <span class="bold">"Acquire"</span> to capture the 12-lead snapshot when ECG stabilises.</li>
-                </ol>
-              </div>
-                
-                  
-              <h3>Transmitting ECG to hospitals</h3>
-                <ul>
-                  <li>Follow the same steps from the Transmission Test, except choose the desired hospital instead of  “3rd Div Test”</li>
-                </ul>
-              <h3>Configuring Waveform Display</h3>
-                <ul>
+                <div class="h3-container">
+                  <h4>ECG Landmarks</h4>
+                  <img class="illust" src="./assets/images/landmarks.png">
+                  <ul>
+                    <li>LA/RA: below collar bone, meaty area</li>
+                    <li>LL/RL: below ribcage, away from stomach</li>
+                    <li>V1: 4th intercostal space, right sternal border</li>
+                    <li>V2: 4th intercostal space, left sternal border</li>
+                    <li>V4: 5th intercostal space, midclavicular line</li>
+                    <li>V3: in between V2 and V4</li>
+                    <li>V6: 5th intercostal space, mid-axillary line</li>
+                    <li>V5: in between V4 and V6</li>
+                  </ul>
+                  <h4>Acquiring 12-lead snapshot</h4>
+                  <ol>
+                    <li>Place limb and chest leads onto the patient.</li>
+                    <li>Connect the 12-lead cable to the 4-lead cable in the correct orientation.</li>
+                    <li>Press the <span class="bold">"12-lead"</span> button to display 12-lead monitoring screen.</li>
+                    <li>Input patient's gender, age and last 4-digit NRIC using quick access keys.</li>
+                    <li>Instruct the patient to stay still for the duration of 12-lead snapshot.</li>
+                    <li>Press <span class="bold">"Acquire"</span> to capture the 12-lead snapshot when ECG stabilises.</li>
+                  </ol>
+                </div>
+                                
+              <h3>Transmitting ECG to Hospitals</h3>
+                <div class="h3-container">
+                  <div class="info-box">
+                    <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                    <div>Transmitting ECG to the hospital is customarily done for all <span class="inbox-red">STEMI standby</span> cases.</div>
+                  </div>
+                  <ol>
+                    <li>Press the <span class="bold">"12-lead"</span> quick access key to display 12-lead monitoring screen.</li>
+                    <li>Press the <span class="bold">"12-Lead Review"</span> quick access key to view all 12-lead snapshots.</li>
+                    <li>Scroll through the list and select the desired snapshot with navigation keys.</li>
+                    <li>Press the <span class="bold">"Transmit"</span> quick access key and transmit to the desired hospital.</li>
+                    <li>Ensure the screen displays <span class="bold">"Transmission successful"</span> and the green visual alarm indicator lights up.</li>
+                  </ol>
+                </div>
+
+              <h3 style="display: none;">Configuring Waveform Display</h3>
+              <!-- pending checks -->
+                <ul style="display: none;">
                   <li>Use the “Lead” quick access key to toggle between all leads</li>
                   <li>Alternatively, use navigation keys to select the “Lead” field to change the lead displayed.</li>
                 </ul>
             </div>
+
           <h2>General Troubleshooting</h2>
-              <h3>Troubleshooting SpO2 errors</h3>
-                <ul>
-                  <li>“Check Sensor”:</li>
+            <div class="h2-container end-container">
+              <h3>Troubleshooting SpO2</h3>
+                <div class="h3-container">
+                  <h4>Sources of errors in SpO2 readings</h4>
                     <ul>
-                      <li>The sensor is not connected to ZOLL</li>
-                      <li>Poor contact between the sensor and finger</li>
+                      <li><span class="red">Cold fingers</span>: Rub to warm up</li>
+                      <li><span class="red">Nail polish</span>: Place sensor sideways</li>
+                      <li><span class="red">CO/CN poisoning</span>: Unable to utilise O2 despite high saturation; Give 100% O2</li>
+                      <li><span class="red">Movement of finger</span>: Hold to stabilise</li>
+                      <li><span class="red">Poor perfusion</span>: Avoid taking BP on the same side</li>
                     </ul>
-                  <li>Factors that could cause inaccurate readings:
+                  <h4>"Check Sensor" message</h4>
+                  <ul>
+                    <li>The sensor cable is not connected to ZOLL unit.</li>
+                    <li>There is poor contact between the sensor and finger.</li>
+                  </ul>
+                </div>  
+
+              <h3>Troubleshooting BP</h3>
+                <div class="h3-container">
+                  <h4>Artefact symbol</h4>
+                    <img class="illust" src="./assets/images/bp_reading.png">
                     <ul>
-                      <li>Cold fingers: Rub to warm up</li>
-                      <li>Nail polish: Place sensor sideways</li>
-                      <li>CO/CN poisoning: Nil</li>
-                      <li>Movement of fingers: Hold to stabilise</li>
-                      <li>Poor perfusion: Avoid taking BP on the same side</li>
+                      <li>Inproper cuff application</li>
+                      <li>Cardiac arrthythmias</li>
+                      <li>Body/Vehicle motions</li>
                     </ul>
-                  </li>
-                </ul>
-              <h3>Troubleshooting BP errors</h3>
-                <ul>
-                  <li>Inaccurate BP, showing the artefact sign. Common causes:
+                  <h4>"Reading Failed" message</h4>
                     <ul>
-                      <li>Movement</li>
-                      <li>Incorrect cuff size</li>
+                      <li>Inproper cuff application</li>
+                      <li>The patient's pulse is too weak</li>
                     </ul>
-                  </li>
-                  <li>“Reading Failed” 🡪 ZOLL is unable to detect blood pressure (Readjust cuff OR check radial pulse)</li>
-                  <li>“Air Leak” 🡪 Check for leak on BP cuff, hose, and points of connection</li>
-                </ul>
-              <h3>Troubleshooting ECG errors</h3>
-                <ul> 
-                  <li>“Lead fault”:</li>
+                  <h4>"Air Leak" message</h4>
+                    <ul>
+                      <li>A major air leak is preventing cuff inflation, check
+                        hose and cuff connections.</li>
+                    </ul>
+                  <h4>"Weak Pulse" message</h4>
+                    <ul>
+                      <li>The patient's pulse is too weak</li>
+                    </ul>
+                </div>
+
+              <h3>Troubleshooting ECG</h3>
+                <div class="h3-container">
+                  <h4>"Lead Fault" message</h4>
                     <ul>
                       <li>Lead is detached from or in poor contact with the patient's body.</li>
-                      <li>ECG cable is detached.</li>
+                      <li>ECG cable is detached from ZOLL unit.</li>
                     </ul>
-                  <li>Artefacts/Shaky ECG lines:</li>
+                  <h4>Artefacts in waveforms</h4>
+                  <div class="info-box">
+                    <div class="icon-box"><img src="./assets/icons/info-circle.svg" style="height: 21px;"></div>
+                    <div>To avoid artefacts, place 4-lead on the limbs if the patient is having SOB. Similarly, if the patient has shivering limbs, place 4-lead on the body instead.</div>
+                  </div>
                     <ul>
-                      <li>Patient is moving: Avoid placing 4-lead on the body for breathless patients</li>
-                      <li>Poor contact between the electrode and patient's body due to sweat, hair, air pockets, or the lack of gel</li>
-                      <li>Movement of cables due to wind</li>
-                      <li>Leads are placed inaccurately onto bony regions of the patient's body</li>
+                      <li>The patient is moving or speaking.</li>
+                      <li>Poor contact between the electrode and the patient's body due to sweat, hair, air pockets, or the lack of gel</li>
+                      <li>Wind causing small movements in the cables</li>
+                      <li>Leads are placed inaccurately onto bony regions of the patient's body.</li>
                     </ul>
-                </ul>
-              <h3>Troubleshooting failed transmission</h3>
-                <ul>
-                  <li>Going to an open space to transmit</li>
-                  <li>Change the modem's extension cable</li>
-                  <li>Connect the modem directly to the ZOLL</li>
-                  <li>Check if the SIM card is present inside the modem</li>
-                  <li>If the problem persists, inform the paramedic in charge and Equipment IC, then submit the Equipment Service Report accordingly
-                  </li>
-                </ul>
+                </div>
+
+              <h3>Troubleshooting Failed Transmission</h3>
+                <div class="h3-container end-container">
+                  <ul>
+                    <li>Going to an open space to transmit.</li>
+                    <li>Change the modem's extension cable or onnect the modem directly to the ZOLL.</li>
+                    <li>Check if the SIM card is present inside the modem.</li>
+                    <li>If the problem persists, inform the paramedic in charge and Equipment IC, then submit the Equipment Service Report.</li>
+                </ul> 
+                </div>
+            </div>  
       </div>
     </div>
   </main>
@@ -644,7 +693,7 @@
     <!-- FOOTER -->
     <div class="footer-container" draggable="false">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-        <a href="#" class="col d-flex align-items-center justify-content-center link-body-emphasis text-decoration-none">
+        <a class="col d-flex align-items-center justify-content-center link-body-emphasis text-decoration-none">
           <img src=./assets/icons/heart-pulse.svg style="width: 20px;">
         </a>
       </footer>
