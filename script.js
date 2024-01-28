@@ -15,13 +15,7 @@ function toggleNav(x) {
       document.getElementById("dirToggler").src = "./assets/icons/bookmarks.svg";
       document.getElementById("pageDir").classList.toggle("show-dir-border")
     }
-    if(document.getElementById("pageDir").style.width !== "0px") {
-      document.getElementById("pageDir").style.width = "0px";
-      document.getElementById("dirToggler").src = "./assets/icons/bookmarks.svg";
-      document.getElementById("pageDir").classList.toggle("show-dir-border")
-    }
   }else{
-    sideNav.style.width = "0px";
     sideNav.style.width = "0px";
     const body = document.body;
     const scrollY = body.style.top;
@@ -49,14 +43,7 @@ function toggleDir(x) {
       document.getElementById("navbarToggler").classList.toggle("change")
       document.getElementById("sideNav").classList.toggle("show-sidenav");
     }
-    if(document.getElementById("sideNav").style.width !== "0px") {
-      document.getElementById("sideNav").style.width = "0px";
-      document.getElementById("navbarToggler").classList.toggle("change")
-      document.getElementById("sideNav").classList.toggle("show-sidenav");
-    }
   }else{
-    pageDir.style.width = "0px";
-    dirToggler.src = "./assets/icons/bookmarks.svg";
     pageDir.style.width = "0px";
     dirToggler.src = "./assets/icons/bookmarks.svg";
     const body = document.body;
@@ -65,7 +52,6 @@ function toggleDir(x) {
     body.style.top = '';
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
-  pageDir.classList.toggle("show-dir-border");
   pageDir.classList.toggle("show-dir-border");
 }
 
