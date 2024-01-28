@@ -24,7 +24,6 @@ function toggleNav(x) {
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
   sideNav.classList.toggle("show-sidenav");
-  sideNav.classList.toggle("show-sidenav");
   x.classList.toggle("change");
 }
 
