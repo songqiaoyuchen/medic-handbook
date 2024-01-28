@@ -6,9 +6,6 @@ function toggleNav(x) {
   var sideNav = document.getElementById("sideNav")
   if(sideNav.style.width === "0px" || !sideNav.style.width) {
     sideNav.style.width = "200px";
-  var sideNav = document.getElementById("sideNav")
-  if(sideNav.style.width === "0px" || !sideNav.style.width) {
-    sideNav.style.width = "200px";
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
     body.style.position = 'fixed';
@@ -38,11 +35,6 @@ function toggleNav(x) {
 }
 
 function toggleDir(x) {
-  var pageDir = document.getElementById("pageDir")
-  var dirToggler = document.getElementById("dirToggler")
-  if (pageDir.style.width === "0px" || !pageDir.style.width) {
-    pageDir.style.width = "300px";
-    dirToggler.src = "./assets/icons/bookmarks-fill.svg";
   var pageDir = document.getElementById("pageDir")
   var dirToggler = document.getElementById("dirToggler")
   if (pageDir.style.width === "0px" || !pageDir.style.width) {
@@ -146,6 +138,3 @@ function toggleZollDropdown4() {
     document.getElementById("zollDropdown4").style.height = "228.75px";
   }
 }
-
-  
-  
