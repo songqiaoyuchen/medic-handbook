@@ -234,7 +234,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     overflow: hidden;
     text-wrap: nowrap;
     text-decoration: none;
-    margin: 16px 0px 16px 32px;
+    margin: 16px 0px 16px 35px;
 }
 
 .sidenav .sub-link:hover {
@@ -279,7 +279,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .directory .nav-link {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 24px;
     color: #b5b2ff;
     display: block;
     transition: 0.3s;
@@ -295,7 +295,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     overflow: hidden;
     text-wrap: nowrap;
     text-decoration: none;
-    margin: 16px 0px 16px 32px;
+    margin: 16px 0px 16px 27px;
 }
 
 

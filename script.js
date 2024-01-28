@@ -5,7 +5,7 @@ window.addEventListener('scroll', () => {
 function toggleNav(x) {
   var sideNav = document.getElementById("sideNav")
   if(sideNav.style.width === "0px" || !sideNav.style.width) {
-    sideNav.style.width = "200px";
+    sideNav.style.width = "230px";
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
     body.style.position = 'fixed';
@@ -31,7 +31,7 @@ function toggleDir(x) {
   var pageDir = document.getElementById("pageDir")
   var dirToggler = document.getElementById("dirToggler")
   if (pageDir.style.width === "0px" || !pageDir.style.width) {
-    pageDir.style.width = "300px";
+    pageDir.style.width = "320px";
     dirToggler.src = "./assets/icons/bookmarks-fill.svg";
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
