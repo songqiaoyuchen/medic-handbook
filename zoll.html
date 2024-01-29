@@ -87,20 +87,64 @@
     <a class="nav-link" style="height: 60px"></a>
   </div>
 
+  <!-- DIRECTORY -->
+  <div id="pageDir" class="directory" style="width: 0px;">
+    <div class="nav-link" style="padding-top: 24px;">ZOLL X Series</div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown1()">General Information</a>
+    <div id="zollDropdown1" class="dropdown-container" style="height: 175.56px">
+      <a class="sub-link">Front Panel</a>
+      <a class="sub-link">Display Screen</a>
+      <a class="sub-link" onclick="scrollToQAK()">Quick Access Keys</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown2()">First Parade Task</a>
+    <div id="zollDropdown2" class="dropdown-container" style="height: 494.69px;">
+      <a class="sub-link">ZOLL Unit Check</a>
+      <a class="sub-link">ZOLL Battery Check</a>
+      <a class="sub-link">ZOLL Power-on Test</a>
+      <a class="sub-link">ZOLL AED Check</a>
+      <a class="sub-link">Defibrillator Short Test</a>
+      <a class="sub-link">ZOLL SpO2 Check</a>
+      <a class="sub-link">ZOLL NIBP Check</a>
+      <a class="sub-link">ZOLL ECG Check</a>
+      <a class="sub-link">Transmission Test</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown3()">Proficiency Requirement</a>
+    <div id="zollDropdown3" class="dropdown-container" style="height: 547.88px;">
+      <a class="sub-link">Changing Patient Mode</a>
+      <a class="sub-link">Recalibrating ZOLL Battery</a>
+      <a class="sub-link">Changing System Date and Time</a>
+      <a class="sub-link">Placing AED Pads</a>
+      <a class="sub-link">Applying Blood Pressure Cuffs</a>
+      <a class="sub-link">Setting Automatic Interval BP</a>
+      <a class="sub-link">Viewing Past NIBP/SpO2 Readings</a>
+      <a class="sub-link">Printing Trend Summary</a>
+      <a class="sub-link">Performing 12-lead ECG</a>
+      <a class="sub-link">Transmitting ECG to Hospitals</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown4()">General Troubleshooting</a>
+    <div id="zollDropdown4" class="dropdown-container" style="height: 228.75px;">
+      <a class="sub-link">Troubleshooting SpO2</a>
+      <a class="sub-link">Troubleshooting BP</a>
+      <a class="sub-link">Troubleshooting ECG</a>
+      <a class="sub-link">Troubleshooting Failed Transmission</a>
+    </div>
+    <a class="nav-link" style="height: 60px"></a>
+  </div>
+
   <!-- MAIN -->
   <main>
     <div class="main-container">
-      <!-- DIRECTORY -->
-      <div id="pageDir" class="directory" style="width: 0px;">
-        <div class="nav-link" style="padding-top: 24px;">ZOLL X Series</div>
-        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown1()">General Information</a>
-        <div id="zollDropdown1" class="dropdown-container" style="height: 175.56px">
+      <!-- IN PAGE DIRECTORY -->
+      <div class="inpage-directory" style="width: 300px;">
+        <div class="nav-link" style="margin-top: 24px;" onclick="window.scrollTo(0,0)">ZOLL X Series</div>
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown1()">General Information</a>
+        <div id="zollInpageDropdown1" class="dropdown-container" style="height: 175.56px">
           <a class="sub-link">Front Panel</a>
           <a class="sub-link">Display Screen</a>
-          <a class="sub-link">Quick Access Keys</a>
+          <a class="sub-link" onclick="scrollToQAK()">Quick Access Keys</a>
         </div>
-        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown2()">First Parade Task</a>
-        <div id="zollDropdown2" class="dropdown-container" style="height: 494.69px;">
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown2()">First Parade Task</a>
+        <div id="zollInpageDropdown2" class="dropdown-container" style="height: 494.69px;">
           <a class="sub-link">ZOLL Unit Check</a>
           <a class="sub-link">ZOLL Battery Check</a>
           <a class="sub-link">ZOLL Power-on Test</a>
@@ -111,8 +155,8 @@
           <a class="sub-link">ZOLL ECG Check</a>
           <a class="sub-link">Transmission Test</a>
         </div>
-        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown3()">Proficiency Requirement</a>
-        <div id="zollDropdown3" class="dropdown-container" style="height: 547.88px;">
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown3()">Proficiency Requirement</a>
+        <div id="zollInpageDropdown3" class="dropdown-container" style="height: 547.88px;">
           <a class="sub-link">Changing Patient Mode</a>
           <a class="sub-link">Recalibrating ZOLL Battery</a>
           <a class="sub-link">Changing System Date and Time</a>
@@ -124,8 +168,8 @@
           <a class="sub-link">Performing 12-lead ECG</a>
           <a class="sub-link">Transmitting ECG to Hospitals</a>
         </div>
-        <a class="dropdown-btn nav-link" onclick="toggleZollDropdown4()">General Troubleshooting</a>
-        <div id="zollDropdown4" class="dropdown-container" style="height: 228.75px;">
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown4()">General Troubleshooting</a>
+        <div id="zollInpageDropdown4" class="dropdown-container" style="height: 228.75px;">
           <a class="sub-link">Troubleshooting SpO2</a>
           <a class="sub-link">Troubleshooting BP</a>
           <a class="sub-link">Troubleshooting ECG</a>
@@ -133,6 +177,9 @@
         </div>
         <a class="nav-link" style="height: 60px"></a>
       </div>
+
+      <!-- FILLER DIRECTORY -->
+      <div  class="filler-directory"></div>
 
       <!-- ARTICLE -->
       <div class="article">
@@ -148,7 +195,7 @@
               <div class="h3-container">
                 <img class="solo-illust" src="./assets/images/screen.png">
               </div>
-              <h3>Quick Access Keys</h3>
+              <h3 id="QAK">Quick Access Keys</h3>
               <div class="h3-container">
                 <div class="table-container">
                   <div class="table-cell">
@@ -346,7 +393,7 @@
                   </div>
                   <ol>
                     <li>Connect the CPR Connector to the black self-test plug.</li>
-                    <li>Press the <span class="bold">"Energy Select"</span> button and select 30 joules.</li>
+                    <li>Press the <span class="bold">"Energy Select"</span> button and select <span class="red">30 joules</span> .</li>
                     <li>Press the <span class="bold">"Charge"</span> button and allow ZOLL to charge.</li>
                     <li>Press the <span class="bold">"Shock"</span> button when the button lights up in orange.</li>
                     <li>The test strip will be automatically printed. Check all tests are shown as pass.</li>
@@ -523,7 +570,7 @@
                   </ol>
                   <h4>Applying neonate cuffs</h4>
                   <ul>
-                    <li>Attach the <span class="yellow">single lumen hose</span> to the ZOLL to use neonate cuffs.</li>
+                    <li>Attach the single lumen hose to the ZOLL to use neonate cuffs.</li>
                     <li>You may apply the BP cuff on the <span class="red">thigh</span> of neonate patients.</li>
                   </ul>
                   <div class="square-grid">
@@ -551,7 +598,7 @@
                 <div class="h3-container">
                   <ul>
                     <li>Press the <span class="bold">"Display/Home"</span> button until Trends Status window is displayed.</li>
-                    <li>Select the "Navigate here to scroll through trends" field at the bottom of the Trends window.</li>
+                    <li>Select the <span class="bold">"Navigate here to scroll through trends"</span> field at the bottom of the Trends window.</li>
                     <li>Use navigation keys to scroll through past readings.</li>
                   </ul>
                 </div>
@@ -570,14 +617,14 @@
                   <h4>ECG Landmarks</h4>
                   <img class="illust" src="./assets/images/landmarks.png">
                   <ul>
-                    <li>LA/RA: below collar bone, meaty area</li>
-                    <li>LL/RL: below ribcage, away from stomach</li>
-                    <li>V1: 4th intercostal space, right sternal border</li>
-                    <li>V2: 4th intercostal space, left sternal border</li>
-                    <li>V4: 5th intercostal space, midclavicular line</li>
-                    <li>V3: in between V2 and V4</li>
-                    <li>V6: 5th intercostal space, mid-axillary line</li>
-                    <li>V5: in between V4 and V6</li>
+                    <li><span class="bold">LA/RA</span>: below collar bone, meaty area</li>
+                    <li><span class="bold">LL/RL</span>: below ribcage, away from stomach</li>
+                    <li><span class="bold">V1</span>: 4th intercostal space, right sternal border</li>
+                    <li><span class="bold">V2</span>: 4th intercostal space, left sternal border</li>
+                    <li><span class="bold">V4</span>: 5th intercostal space, midclavicular line</li>
+                    <li><span class="bold">V3</span>: in between V2 and V4</li>
+                    <li><span class="bold">V6</span>: 5th intercostal space, mid-axillary line</li>
+                    <li><span class="bold">V5</span>: in between V4 and V6</li>
                   </ul>
                   <h4>Acquiring 12-lead snapshot</h4>
                   <ol>

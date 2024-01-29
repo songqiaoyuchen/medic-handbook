@@ -33,10 +33,6 @@ function toggleDir(x) {
   if (pageDir.style.width === "0px" || !pageDir.style.width) {
     pageDir.style.width = "320px";
     dirToggler.src = "./assets/icons/bookmarks-fill.svg";
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    const body = document.body;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
     if(document.getElementById("sideNav").style.width !== "0px") {
       document.getElementById("sideNav").style.width = "0px";
       document.getElementById("navbarToggler").classList.toggle("change")
@@ -45,11 +41,6 @@ function toggleDir(x) {
   }else{
     pageDir.style.width = "0px";
     dirToggler.src = "./assets/icons/bookmarks.svg";
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
   pageDir.classList.toggle("show-dir-border");
 }
@@ -92,6 +83,7 @@ function toggleAdminDropdown() {
   }
 }
 
+//ZOLL DROPDOWNS
 function toggleZollDropdown1() {
   if(document.getElementById("zollDropdown1").style.height === "175.56px"){
     document.getElementById("zollDropdown1").style.height = "0px"
@@ -122,4 +114,43 @@ function toggleZollDropdown4() {
   }else{
     document.getElementById("zollDropdown4").style.height = "228.75px";
   }
+}
+
+function toggleInpageZollDropdown1() {
+  if(document.getElementById("zollInpageDropdown1").style.height === "175.56px"){
+    document.getElementById("zollInpageDropdown1").style.height = "0px"
+  }else{
+    document.getElementById("zollInpageDropdown1").style.height = "175.56px";
+  }
+}
+
+function toggleInpageZollDropdown2() {
+  if(document.getElementById("zollInpageDropdown2").style.height === "494.69px"){
+    document.getElementById("zollInpageDropdown2").style.height = "0px"
+  }else{
+    document.getElementById("zollInpageDropdown2").style.height = "494.69px";
+  }
+}
+
+function toggleInpageZollDropdown3() {
+  if(document.getElementById("zollInpageDropdown3").style.height === "547.88px"){
+    document.getElementById("zollInpageDropdown3").style.height = "0px"
+  }else{
+    document.getElementById("zollInpageDropdown3").style.height = "547.88px";
+  }
+}
+
+function toggleInpageZollDropdown4() {
+  if(document.getElementById("zollInpageDropdown4").style.height === "228.75px"){
+    document.getElementById("zollInpageDropdown4").style.height = "0px"
+  }else{
+    document.getElementById("zollInpageDropdown4").style.height = "228.75px";
+  }
+}
+
+//ZOLL SCROLLS
+function scrollToQAK() {
+  const element = document.getElementById("QAK");
+  element.scrollIntoView();
+  window.scrollBy(0, -95.19)
 }
