@@ -422,7 +422,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-color: #08082b00;
     border: solid #6543ff 3px;
     border-radius: 5px;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -738,7 +738,7 @@ li {
     }
 
     .card {
-        flex-basis: 150px;
+        flex-basis: 200px;
     }
     
     .directory {
