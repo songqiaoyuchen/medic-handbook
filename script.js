@@ -35,6 +35,11 @@ function toggleDir(x) {
     dirToggler.src = "./assets/icons/bookmarks-fill.svg";
     if(document.getElementById("sideNav").style.width !== "0px") {
       document.getElementById("sideNav").style.width = "0px";
+      const body = document.body;
+      const scrollY = body.style.top;
+      body.style.position = '';
+      body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
       document.getElementById("navbarToggler").classList.toggle("change")
       document.getElementById("sideNav").classList.toggle("show-sidenav");
     }
