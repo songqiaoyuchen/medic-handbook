@@ -208,17 +208,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     z-index: 2; 
     top: 71.19px; 
     right: 0;
-    background-color: #08082b; 
+    background-color: #0e0535; 
     overflow-x: hidden; 
     transition: 0.3s; 
 }
 
-.main-sidenav {
-    top: 70.19px;
-}
-
 .show-sidenav {
-    border-left: solid #6543ff 1px;
+    border-left: solid rgb(114, 83, 255) 1px;
  }
 
 .sidenav .nav-link {
@@ -286,7 +282,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .inpage-directory .nav-link {
     padding: 8px 8px 8px 0px;
-    color: #b5b2ff;
+    color: white;
     display: block;
     transition: 0.3s;
     overflow: hidden;
@@ -295,7 +291,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .inpage-directory .sub-link {
     padding: 6px 8px 6px 16px;
     font-size: 14px;
-    color: #b5b2ff;
+    color: white;
     display: block;
     transition: 0.3s;
     overflow: hidden;
@@ -311,14 +307,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     z-index: 2; 
     top: 71.19px; 
     right: 0;
-    background-color: #08082b; 
+    background-color: #0e0535; 
     overflow-x: hidden; 
     transition: 0.3s; 
 }
 
 .directory .nav-link {
     padding: 8px 8px 8px 24px;
-    color: #b5b2ff;
+    color: white;
     display: block;
     transition: 0.3s;
     overflow: hidden;
@@ -327,7 +323,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .directory .sub-link {
     padding: 6px 8px 6px 16px;
     font-size: 14px;
-    color: #b5b2ff;
+    color: white;
     display: block;
     transition: 0.3s;
     overflow: hidden;
@@ -757,13 +753,12 @@ li {
         position: fixed; 
         z-index: 2; 
         left: 0;
-        background-color: #08082b; 
         overflow-x: hidden; 
         transition: 0.3s; 
     }
 
     .show-dir-border {
-        border-right: solid #6543ff 1px;
+        border-right: solid rgb(114, 83, 255) 1px;
      }
 
     .inpage-directory {

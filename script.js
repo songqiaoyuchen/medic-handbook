@@ -306,3 +306,9 @@ function scrollToFT() {
   element.scrollIntoView();
   window.scrollBy(0, -95.19)
 }
+
+function scrollToZollRef() {
+  const element = document.getElementById("ZollRef");
+  element.scrollIntoView();
+  window.scrollBy(0, -95.19)
+}
