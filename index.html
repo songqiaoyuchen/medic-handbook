@@ -65,26 +65,33 @@
   </nav>
 
   <!-- SIDENAV -->
-  <div id="sideNav" class="sidenav main-sidenav" style="width: 0px;">
-    <div class="dropdown-btn nav-link" onclick="toggleRefDropdown()" style="padding-top: 24px;">References</div>
-    <div id="refDropdown" class="dropdown-container" style="height: 175.56px;">
-      <a class="sub-link" href="#">Gen6 Checklist</a>
-      <a class="sub-link" href="#">Gen7 Checklist</a>
-      <a class="sub-link" href="#">Equipment List</a>
+  <div id="sideNav" class="sidenav" style="width: 0px;">
+    <div class="dropdown-btn nav-link" onclick="toggleRefDropdown(this)" style="padding-top: 24px;">References
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
     </div>
-    <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown()">Guides</a>
+    <div id="refDropdown" class="dropdown-container" style="height: 175.56px;">
+      <a class="sub-link">Gen6 Checklist</a>
+      <a class="sub-link">Gen7 Checklist</a>
+      <a class="sub-link">Equipment List</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown(this)">Guides
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
     <div id="guideDropdown" class="dropdown-container" style="height: 175.56px;">
       <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
-      <a class="sub-link" href="#">Blood Glucometer</a>
-      <a class="sub-link" href="#">Laerdal Suction Unit</a>
+      <a class="sub-link">Blood Glucometer</a>
+      <a class="sub-link">Laerdal Suction Unit</a>
     </div>
-    <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown()">Admin</a>
+    <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown(this)">Admin
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
     <div id="adminDropdown" class="dropdown-container" style="height: 122.38px;">
-      <a class="sub-link" href="#">Roster</a>
-      <a class="sub-link" href="#">Leaves</a>
+      <a class="sub-link">Roster</a>
+      <a class="sub-link">Leaves</a>
     </div>
-    <a class="nav-link" href="#">Links</a>
-    <a class="nav-link" href="#">About</a>
+    <a class="nav-link">Links</a>
+    <a class="nav-link">About</a>
+    <a class="nav-link" style="height: 60px"></a>
   </div>
 
   <!-- DIRECTORY FILLER FOR JS-->
@@ -109,7 +116,7 @@
       <div class="heading">Key Articles</div>
       <div class="card-container">
         <a href="./zoll.html"><div class="card" style="padding: 8px 16px; background-image: url(./assets/images/zoll_featured.jpg); background-size: cover; background-position: center;">
-          <h4 style="margin: 0; text-decoration: underline;">ZOLL X Series</h4>
+          <h4 style="margin-top: 8px; text-decoration: underline;">ZOLL X Series</h4>
         </div></a>
         <div class="card"></div>
         <div class="card" style="color: rgba(240, 248, 255, 0);">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</div>
