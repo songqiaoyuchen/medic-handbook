@@ -14,10 +14,10 @@
     <script src="./script.js"></script>
 </head>
 
-<body class="homepage">
+<body class="aboutpage">
   <!-- NAVBAR -->
   <nav class="navbar fixed-top navbar-expand-md">
-    <divcalc60px class="container-fluid">
+    <div class="container-fluid">
       <a class="navbar-brand" href="./index.html"><img src="assets/icons/brand.svg" style="height: 30px;"></a>
       <div class="dir-toggler" onclick="toggleDir(this)"><img id="dirToggler" src="./assets/icons/bookmarks.svg" style="display: none;"></div>
       <a class="mobile-brand" href="./index.html"><img src="./assets/icons/heart-pulse.svg" style="display: none;"></a>
@@ -97,38 +97,32 @@
   <!-- DIRECTORY FILLER FOR JS-->
   <div id="pageDir" class="directory" style="width: 0px;"></div>
 
-  <!-- MAIN -->
-  <main draggable="false">
-    <div class="hero-background" draggable="false">
-      <div class="hero-container">
-        <div class="subtitle">/ STN 31</div>
-        <div class="title">MEDIC HANDBOOK</div>
-        <div class="subtitle">A guide to working as a medic in Yishun Fire Station.</div>
-        <div class="button-container">
-          <a href="./guides/zoll.html"><button type="button" class="main-btns btn btn-primary btn-lg">
-            <img src="./assets/icons/file-earmark-text.svg" style="height: 25px;">
-            Start reading
-          </button></a>
-          <a href="./about.html"><button type="button" class="main-btns btn btn-outline-danger btn-lg">
-            <img src="./assets/icons/send.svg" style="height: 25px;">
-            Send feedback
-          </button></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- KEY ARTICLES -->
-    <div class="featured-container" draggable="false">
-      <div class="heading">Key Articles</div>
-      <div class="card-container">
-        <a href="./guides/zoll.html"><div class="card" style="padding: 8px 16px; background-image: url(./assets/images/zoll_featured.jpg); background-size: cover; background-position: center;">
-          <h4 style="margin-top: 8px; text-decoration: underline;">ZOLL X Series</h4>
-        </div></a>
-        <div class="card"></div>
-        <div class="card" style="color: rgba(240, 248, 255, 0);">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+  <main>
+    <div class="main-container">
+      <div class="about">
+        <h1>About Medic Handbook</h1>
+        <h2>Contact</h2>
+        <p>This website is still under development. For any feedback on the content or bugs on the website, please contact me personally via songqiaoyuchen@gmail.com.</p>
+        <h2>Disclaimers</h2>
+        <p>
+          The information provided by this website is for general information purposes only. 
+          All information on this website is provided in good faith, 
+          however we make no representation or warranty of any kind, expressed or implied, 
+          regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on this website.
+          Under no circumstances shall we have any liability to you for any loss or damage of any kind 
+          incurred as a result of the use of this website or reliance on any information provided on this website.
+        </p>
+        <p>
+          This website may contain links to other websites or content belonging to or originating from third parties.
+          Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.
+          We do not warrant, endores, guarantee, or assume responsibily for the accuracy or reliability 
+          of any information offered by third-party websites linked through this website.
+        </p>
+        <p>
+          This website cannot and does not contain medical/health advice. The medical/health information is provided for
+          general informational and educational purposes only and is not a subsititue for professional advice.
+          The use or reliance of any information contained on this website is solely at your own risk.
+        </p>
       </div>
     </div>
   </main>
@@ -140,6 +134,7 @@
         <img src=./assets/icons/heart-pulse.svg style="width: 20px;">
       </a>
     </footer>
-
+  </div>
+    
 </body>
 </html>

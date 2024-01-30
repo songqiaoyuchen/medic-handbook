@@ -12,7 +12,7 @@ function toggleNav(x) {
     body.style.top = `-${scrollY}`;
     if(document.getElementById("pageDir").style.width !== "0px") {
       document.getElementById("pageDir").style.width = "0px";
-      document.getElementById("dirToggler").src = "./assets/icons/bookmarks.svg";
+      document.getElementById("dirToggler").src = "../assets/icons/bookmarks.svg";
       document.getElementById("pageDir").classList.toggle("show-dir-border")
     }
   }else{
@@ -32,7 +32,7 @@ function toggleDir(x) {
   var dirToggler = document.getElementById("dirToggler")
   if (pageDir.style.width === "0px" || !pageDir.style.width) {
     pageDir.style.width = "300px";
-    dirToggler.src = "./assets/icons/bookmarks-fill.svg";
+    dirToggler.src = "../assets/icons/bookmarks-fill.svg";
     if(document.getElementById("sideNav").style.width !== "0px") {
       document.getElementById("sideNav").style.width = "0px";
       const body = document.body;
@@ -45,7 +45,7 @@ function toggleDir(x) {
     }
   }else{
     pageDir.style.width = "0px";
-    dirToggler.src = "./assets/icons/bookmarks.svg";
+    dirToggler.src = "../assets/icons/bookmarks.svg";
   }
   pageDir.classList.toggle("show-dir-border");
 }
