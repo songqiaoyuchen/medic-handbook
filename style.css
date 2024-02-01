@@ -450,6 +450,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .footer-container {
     padding: 0px 24px 0px 24px;
     width: 100%;
+    display: none;
 }
 
 .mb-3 {
@@ -743,6 +744,10 @@ li {
         width: 100%;
     }
 
+    .footer-container {
+        display: block;
+    }
+
     .title {
         font-size: 15.6vw;
         text-align: center;
@@ -807,6 +812,10 @@ li {
 
     h4 {
         font-size: 21px;
+    }
+
+    .current-page {
+        border-radius: 0px;
     }
 }
 

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Medic Handbook</title>
+    <link rel="icon" type="image" href="./assets/icons/heart-pulse.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+</head>
+
+<body class="article-page">
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand hidden-mobile" href="./index.html"><img src="./assets/icons/brand.svg" style="height: 30px;"></a>
+      <div class="dir-toggler" onclick="toggleDir(this)"><img id="dirToggler" src="./assets/icons/bookmarks.svg" style="height: 24px;"></div>
+      <a class="mobile-brand" href="./index.html" style="align-self: center;"><img src="./assets/icons/heart-pulse.svg" style="height: 25px;"></a>
+      <div id="navbarToggler" class="navbar-toggler" onclick="toggleNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div class="dropdown">
+            <a class="nav-link dropbtn current-menu">References</a>
+            <div class="dropdown-content">
+              <a class="sub-link current-page" href="./gen-6-checklist.html">Gen6 Checklist</a>
+              <a class="sub-link">Gen7 Checklist</a>
+              <a class="sub-link">Equipment List</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="nav-link dropbtn">Guides</a>
+            <div class="dropdown-content">
+              <a class="sub-link" href="./zoll.html">ZOLL X Series</a>
+              <a class="sub-link">Blood Glucometer</a>
+              <a class="sub-link">Laerdal Suction Unit</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="nav-link dropbtn">Admin</a>
+            <div class="dropdown-content">
+              <a class="sub-link">Roster</a>
+              <a class="sub-link">Leaves</a>
+            </div>
+          </div>
+          <a class="nav-link" href="./about.html">About</a>
+        </div>
+      </div>
+      <div class="search-bar">
+        <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Not Available" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIDENAV -->
+  <div id="sideNav" class="sidenav" style="width: 0px;">
+    <div class="dropdown-btn nav-link current-menu" onclick="toggleRefDropdown(this)" style="padding-top: 24px;">References
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </div>
+    <div id="refDropdown" class="dropdown-container" style="height: 175.56px;">
+      <a class="sub-link current-page" href="./gen-6-checklist.html">Gen6 Checklist</a>
+      <a class="sub-link">Gen7 Checklist</a>
+      <a class="sub-link">Equipment List</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleGuideDropdown(this)">Guides
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
+    <div id="guideDropdown" class="dropdown-container" style="height: 175.56px;">
+      <a class="sub-link" href="./guide/zoll.html">ZOLL X Series</a>
+      <a class="sub-link">Blood Glucometer</a>
+      <a class="sub-link">Laerdal Suction Unit</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleAdminDropdown(this)">Admin
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
+    <div id="adminDropdown" class="dropdown-container" style="height: 122.38px;">
+      <a class="sub-link">Roster</a>
+      <a class="sub-link">Leaves</a>
+    </div>
+    <a class="nav-link">Links</a>
+    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" style="height: 80px"></a>
+  </div>
+
+  <!-- DIRECTORY -->
+  <div id="pageDir" class="directory" style="width: 0px;">
+    <div class="nav-link" style="margin-top: 24px;" onclick="window.scrollTo(0,0)">ZOLL X Series</div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown1(this)">General Information
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
+    <div id="zollDropdown1" class="dropdown-container" style="height: 175.56px">
+      <a class="sub-link" onclick="scrollToFP()">Front Panel</a>
+      <a class="sub-link" onclick="scrollToDS()">Display Screen</a>
+      <a class="sub-link" onclick="scrollToQAK()">Quick Access Keys</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown2(this)">First Parade Task
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
+    <div id="zollDropdown2" class="dropdown-container" style="height: 494.69px;">
+      <a class="sub-link" onclick="scrollToZUC()">ZOLL Unit Check</a>
+      <a class="sub-link" onclick="scrollToZBC()">ZOLL Battery Check</a>
+      <a class="sub-link" onclick="scrollToZPT()">ZOLL Power-on Test</a>
+      <a class="sub-link" onclick="scrollToZAC()">ZOLL AED Check</a>
+      <a class="sub-link" onclick="scrollToDST()">Defibrillator Short Test</a>
+      <a class="sub-link" onclick="scrollToZSC()">ZOLL SpO2 Check</a>
+      <a class="sub-link" onclick="scrollToZNC()">ZOLL NIBP Check</a>
+      <a class="sub-link" onclick="scrollToZEC()">ZOLL ECG Check</a>
+      <a class="sub-link" onclick="scrollToTT()">Transmission Test</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown3(this)">Proficiency Requirement
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
+    <div id="zollDropdown3" class="dropdown-container" style="height: 547.88px;">
+      <a class="sub-link" onclick="scrollToCPM()">Changing Patient Mode</a>
+      <a class="sub-link" onclick="scrollToRZB()">Recalibrating ZOLL Battery</a>
+      <a class="sub-link" onclick="scrollToCDT()">Changing Date and Time</a>
+      <a class="sub-link" onclick="scrollToPAP()">Placing AED Pads</a>
+      <a class="sub-link" onclick="scrollToABPC()">Applying Blood Pressure Cuffs</a>
+      <a class="sub-link" onclick="scrollToSAIB()">Setting Automatic Interval BP</a>
+      <a class="sub-link" onclick="scrollToVPV()">Viewing Past Vitals</a>
+      <a class="sub-link" onclick="scrollToPTS()">Printing Trend Summary</a>
+      <a class="sub-link" onclick="scrollToP12E()">Performing 12-lead ECG</a>
+      <a class="sub-link" onclick="scrollToTEH()">Transmitting ECG to Hospitals</a>
+    </div>
+    <a class="dropdown-btn nav-link" onclick="toggleZollDropdown4(this)">General Troubleshooting
+      <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+    </a>
+    <div id="zollDropdown4" class="dropdown-container" style="height: 228.75px;">
+      <a class="sub-link" onclick="scrollToSE()">SpO2 Errors</a>
+      <a class="sub-link" onclick="scrollToBE()">BP Errors</a>
+      <a class="sub-link" onclick="scrollToEE()">ECG Errors</a>
+      <a class="sub-link" onclick="scrollToFT()">Failed Transmission</a>
+    </div>
+    <a class="nav-link" onclick="scrollToZollRef()">References</a>
+    <a class="nav-link" style="height: 80px"></a>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <div class="main-container">
+      <!-- IN PAGE DIRECTORY -->
+      <div class="inpage-directory" style="width: 300px;">
+        <div class="nav-link" style="margin-top: 24px;" onclick="window.scrollTo(0,0)">ZOLL &#215 Series</div>
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown1(this)">General Information
+          <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+        </a>
+        <div id="zollInpageDropdown1" class="dropdown-container" style="height: 175.56px">
+          <a class="sub-link" onclick="scrollToFP()">Front Panel</a>
+          <a class="sub-link" onclick="scrollToDS()">Display Screen</a>
+          <a class="sub-link" onclick="scrollToQAK()">Quick Access Keys</a>
+        </div>
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown2(this)">First Parade Task
+          <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+        </a>
+        <div id="zollInpageDropdown2" class="dropdown-container" style="height: 494.69px;">
+          <a class="sub-link" onclick="scrollToZUC()">ZOLL Unit Check</a>
+          <a class="sub-link" onclick="scrollToZBC()">ZOLL Battery Check</a>
+          <a class="sub-link" onclick="scrollToZPT()">ZOLL Power-on Test</a>
+          <a class="sub-link" onclick="scrollToZAC()">ZOLL AED Check</a>
+          <a class="sub-link" onclick="scrollToDST()">Defibrillator Short Test</a>
+          <a class="sub-link" onclick="scrollToZSC()">ZOLL SpO2 Check</a>
+          <a class="sub-link" onclick="scrollToZNC()">ZOLL NIBP Check</a>
+          <a class="sub-link" onclick="scrollToZEC()">ZOLL ECG Check</a>
+          <a class="sub-link" onclick="scrollToTT()">Transmission Test</a>
+        </div>
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown3(this)">Proficiency Requirement
+          <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+        </a>
+        <div id="zollInpageDropdown3" class="dropdown-container" style="height: 547.88px;">
+          <a class="sub-link" onclick="scrollToCPM()">Changing Patient Mode</a>
+          <a class="sub-link" onclick="scrollToRZB()">Recalibrating ZOLL Battery</a>
+          <a class="sub-link" onclick="scrollToCDT()">Changing Date and Time</a>
+          <a class="sub-link" onclick="scrollToPAP()">Placing AED Pads</a>
+          <a class="sub-link" onclick="scrollToABPC()">Applying Blood Pressure Cuffs</a>
+          <a class="sub-link" onclick="scrollToSAIB()">Setting Automatic Interval BP</a>
+          <a class="sub-link" onclick="scrollToVPV()">Viewing Past Vitals</a>
+          <a class="sub-link" onclick="scrollToPTS()">Printing Trend Summary</a>
+          <a class="sub-link" onclick="scrollToP12E()">Performing 12-lead ECG</a>
+          <a class="sub-link" onclick="scrollToTEH()">Transmitting ECG to Hospitals</a>
+        </div>
+        <a class="dropdown-btn nav-link" onclick="toggleInpageZollDropdown4(this)">General Troubleshooting
+          <img class="dropdown-icon" src="./assets/icons/caret-down-fill.svg">
+        </a>
+        <div id="zollInpageDropdown4" class="dropdown-container" style="height: 228.75px;">
+          <a class="sub-link" onclick="scrollToSE()">SpO2 Errors</a>
+          <a class="sub-link" onclick="scrollToBE()">BP Errors</a>
+          <a class="sub-link" onclick="scrollToEE()">ECG Errors</a>
+          <a class="sub-link" onclick="scrollToFT()">Failed Transmission</a>
+        </div>
+        <a class="nav-link" onclick="scrollToZollRef()">References</a>
+        <a class="nav-link" style="height: 80px"></a>
+      </div>
+
+      <!-- FILLER DIRECTORY -->
+      <div  class="filler-directory"></div>
+
+      <!-- ARTICLE -->
+      <div class="article">
+        <h1>Gen 6 Amb - Equipment Inventory Checklist</h1>
+        <h2>Driver Cabin</h2>
+        <div class="h2-container">
+          <ul>
+            <li>1 &#215 MIS Smart Phone</li>
+            <li>2 &#215 Portable Radio Communication Set (MCN2)</li>
+            <li>1 &#215 Vehicle Tool Jack</li>
+          </ul>
+          <h4>Driver Cabin: Overhead Compartment</h4>
+          <ul>
+            <li>2 &#215 Rescue Helmet c/w Goggles & Flashlights</li>
+            <li>1 &#215 Hazmat Handbook</li>
+            <li>1 &#215 Driver log Book</li>
+            <li>1 &#215 Daily Vehicle First Parade Task Book</li>
+          </ul>
+          <h4>Driver Cabin: Behind Passenger Seat</h4>
+          <ul>
+            <li>2 &#215 Spare Oxygen Filled Cylinder (Carbon Composite Small Size)</li>
+            <li>2 &#215 Hand-Held Search Light</li>
+          </ul>
+          <h4>Driver Cabin: Behind Driver Seat</h4>
+          <ul>
+            <li>1 &#215 Fire Extinguisher</li>
+            <li>1 &#215 Vehicle Breakdown Sign</li>
+          </ul>
+        </div>
+        <h2>Main Stretcher</h2>
+        <div class="h2-container">
+          <ul>
+            <li>1 &#215 Chair - Cot Stretcher c/w Mattress & 4 Restraints (Ferno 28Z)</li>
+            <li>1 &#215 PVC Handheld Stretcher (Orange Canvas)</li>
+            <li>1 &#215 Blanket</li>
+            <li>1 &#215 Cervical CollarSize Adjustabl, Adult</li>
+          </ul>
+          <h4>Main Stretcher: Defibrillator Set (Zoll X-Series Advanced)</h4>
+          <li>2 &#215 SurePower II Battery Pack</li>
+          <div class="bold">AED Comaprtment:</div>
+          <ul>
+            <li>2 &#215 Defibrillator Pad, Adult</li>
+            <li>1 &#215 Defibrillator Pad, Paediatric</li>
+            <li>1 &#215 Multifunction Cable</li>
+            <li>1 &#215 End Tidal Carbon Dioxide Sensor, Adult/Paediatric</li>
+            <li>1 &#215 End Tidal Carbon Dioxide Sensor, Infant/Neonate</li>
+          </ul>
+          <div class="bold">SpO2 Compartment:</div>
+          <ul>
+            <li>1 &#215 Portable Handheld Pulse Oximeter (SPO2)</li>
+            <li>1 &#215 Saturation Pulse Oxymeter Main Trunk</li>
+            <li>1 &#215 Saturation Pulse Oxymeter Cable, Adult</li>
+            <li>1 &#215 Saturation Pulse Oxymeter Cable, Paediatric</li>
+          </ul>
+          <div class="bold">BP Compartment:</div>
+          <ul>
+            <li>1 &#215 Blood Pressure Cuff Child (Size 9)</li>
+            <li>1 &#215 Blood Pressure Cuff Small Adult (Size 10)</li>
+            <li>1 &#215 Blood Pressure Cuff Adult (Size 11)</li>
+            <li>1 &#215 Blood Pressure Cuff Large Adult (Size 12)</li>
+            <li>1 &#215 Temperature Sensor Cable, Adult</li>
+            <li>1 &#215 Temperature Sensor Cable, Paediatric</li>
+          </ul>
+          <div class="bold">ECG Compartment:</div>
+          <ul>
+            <li class="yellow-li">1 &#215 Limb Lead Cable (4-lead)</li>
+            <li class="yellow-li">1 &#215 Chest Lead Cable (12-lead)</li>
+            <li>1 &#215 Disposable Shaver</li>
+            <li>1 &#215 Sterile Gauze</li>
+            <li>1 &#215 ZOLL Printer Roll</li>
+            <li>5 &#215 ZOLL Electrodes Pack</li>
+          </ul>
+          <h4>Main Stretcher: Trauma Kit Set</h4>
+          <div class="bold">Main Compartment:</div>
+          <ul>
+            <li>1 &#215 Disposable BVM Adult Set</li>
+            <li>1 &#215 Disposable BVM Paediatric Set</li>
+            <li class="bold">1 &#215 Cooler Bag, Medium (Drug Bag)</li>
+            <li class="bold">1 &#215 Intravenous Kit (IV Bag)</li>
+            <li class="yellow-li">2 &#215 Penthrox Inhalant 3ml</li>
+            <li>1 &#215 Water Bottle with Cups</li>
+            <li>1 &#215 Instant Cold Pack</li>
+            <li>1 &#215 Spacer with Mask</li>
+          </ul>
+          <div class="bold">Cooler Bag, Medium (Drug Bag):</div>
+          <ul>
+            <li>15 &#215 Aspirin 100mg/tab</li>
+            <li>2 &#215 IV Tranexamic Acid 500mg/5ml</li>
+            <li>1 &#215 GTN Spray 0.4mg/spray</li>
+            <li>2 &#215 Injection Adrenaline (Pre-mix 1:10 000) 10ml</li>
+            <li>3 &#215 Injection Adrenaline (1:1000) 1ml</li>
+            <li>1 &#215 Injection Syntometrine 1mg/ml</li>
+            <li>2 &#215 Injection Tramadol 50mg/ml</li>
+            <li>4 &#215 Rectal Diazepam 5mg/2.5mls</li>
+            <li>1 &#215 Ventolin Solution 5mg/ml</li>
+            <li>4 &#215 Injection Atropine 600mcg/ml</li>
+            <li>2 &#215 Honey Oral Glucose Sachet 20g</li>
+            <li>2 &#215 Paracetamol 500mg/tab</li>
+            <li>3 &#215 IV Amiodarone 150mg/3mls</li>
+            <li>2 &#215 Syringe 1ml</li>
+            <li>2 &#215 Syringe 3ml</li>
+            <li>2 &#215 Syringe 10ml</li>
+            <li>2 &#215 Needle 21G</li>
+            <li>2 &#215 Needle 23G</li>
+            <li>1 &#215 Normal Saline 20ml</li>
+          </ul>
+          <div class="bold">Intravenous Kit (IV Bag):</div>
+          <ul>
+            <li>5 &#215 Alcohol Swab</li>
+            <li>5 &#215 Bandage Adhesive (Finger Dressing)</li>
+            <li>1 &#215 Surgical Tape 1/2"</li>
+            <li>1 &#215 Venous Tourniquet</li>
+            <li>2 &#215 TXA Sticker</li>
+            <li>1 &#215 IV Normal Saline 0.9%, 500mls</li>
+            <li>1 &#215 Dextrose 10%, 500ml</li>
+            <li>1 &#215 IV Normal Saline 0.9%, 100ml</li>
+            <li>2 &#215 IV Cannula Size 18G</li>
+            <li>2 &#215 IV Cannula Size 20G</li>
+            <li>2 &#215 IV Cannula Size 22G</li>
+            <li>2 &#215 IV Cannula Size 24G</li>
+            <li>2 Pairs &#215 Non-Sterile Nitrile Gloves 9" (Medium)</li>
+            <li>1 &#215 Kidney Dish</li>
+            <li>5 &#215 Transparent Dressing (Tegaderm)</li>
+            <li>2 &#215 IV Admin Drip Set</li>
+            <li>2 &#215 Needle 21G</li>
+            <li>2 &#215 Needle 23G</li>
+            <li>2 &#215 Syringe 1ml</li>
+            <li>2 &#215 Syringe 3ml</li>
+            <li>2 &#215 Syringe 10ml</li>
+            <li>1 &#215 Biohazard Container, 0.5L</li>
+          </ul>
+          <div class="bold">Top Lid Fold:</div>
+          <ul>
+            <li>4 &#215 Disposable Surgical Mask</li>
+            <li>5 &#215 Refused Conveyance Form English</li>
+            <li>5 &#215 Refused Conveyance Form Malay</li>
+            <li>5 &#215 Refused Conveyance Form Mandarin</li>
+            <li>5 &#215 Refused Conveyance Form Tamil</li>
+            <li>5 &#215 Treat & Discharge Treatment Form</li>
+            <li>5 &#215 Memo to Doctor Certifying Death</li>
+            <li></li>
+            <li>5 &#215 Envelopes</li>
+            <li>1 &#215 Fingerprint Pad</li>
+            <li>2 Pairs &#215 Non-Sterile Nitrile Gloves 9" (Medium)</li>
+            <li>12 &#215 Patient Safety Tag - "No Sharps or Blood Pressure"</li>
+            <li>1 &#215 Stethoscope</li>
+            <li>1 &#215 Airway Guedel Size 40mm</li>
+            <li>1 &#215 Airway Guedel Size 50mm</li>
+            <li>1 &#215 Airway Guedel Size 70mm</li>
+            <li>1 &#215 Airway Guedel Size 80mm</li>
+            <li>1 &#215 Airway Guedel Size 90mm</li>
+            <li>1 &#215 Airway Guedel Size 100mm</li>
+            <li>1 &#215 Salbutamol MDI Inhaler</li>
+          </ul>
+          <div class="bold">Rear Pocket - Airway Management:</div>
+        </div>
+        
+        Main Stretcher: Trauma Kit Set:  
+        2 &#215 Disposable Airway Tube Holder, Adult    
+        1 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe, Size 3   
+        1 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe, Size 4   
+        1 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe, Size 5   
+        1 &#215 Durapore Tape 1" 
+        
+        Main Stretcher: Trauma Kit Set: Front Pocket A/B/C - Dressing  
+        10 &#215 Bandage Adhesive (Finger Dressing)   
+        2 &#215 Crepe Bandage 5cm   
+        2 &#215 Crepe Bandage 7.5cm   
+        1 &#215 Crepe Bandage 10cm   
+        1 &#215 Crepe Bandage 15cm   
+        10 &#215 Melonin 10cm by 10cm   
+        5 &#215 Sterile Pad Size Small (10cm by 20cm)   
+        2 &#215 Sterile Pad Size Large (20cm by 20cm)   
+        5 &#215 Sterile Gauze   
+        1 &#215 Surgical Tape 1/2"   
+        1 &#215 Surgical Tape 1" 
+        
+        Main Stretcher: Trauma Kit Set: Front Pocket - Elastic Holders 
+        1 &#215 Paramedic Scissors   
+        1 &#215 Surgical Scissors   
+        1 &#215 Pen Torch 
+        
+        Main Stretcher: Trauma Kit Set: Right Large Pocket - Vital Sign 
+        Blood Glucometer Set c/w :- 
+        3 &#215 Lancet   
+        5 &#215 Test Strips   
+        5 &#215 Alcohol Swab   
+        5 &#215 Ear Probe Cover   
+        1 &#215 Portable Handheld Pulse Oximeter (SPO2)   
+        1 &#215 Digital Ear Thermometer (Thermoscan)   
+        1 &#215 Digital Blood Pressure Set 
+        
+        Main Stretcher: Trauma Kit Set: Left Large Pocket - Others 
+        2 &#215 Arterial Tourniquet   
+        1 &#215 SAM Splint   
+        5 &#215 Triangular Bandage   
+        2 &#215 Incontinence Sheet   
+        2 &#215 Limpet Bag   
+        5 &#215 Vomitus Bag   
+        5 &#215 Antiseptic Wipes   
+        1 &#215 Oxymetazoline HCL Nasal Spray 0.05% 
+        
+
+        
+        Main Stretcher: Portable Oxygen Administration Kit  
+        1 &#215 Adult Face Mask   
+        1 &#215 Adult Nebuliser Mask   
+        1 &#215 Adult Non-Rebreather Mask   
+        1 &#215 Airway Guedel Size 70mm   
+        1 &#215 Airway Guedel Size 80mm   
+        1 &#215 Airway Guedel Size 90mm   
+        1 &#215 Airway Guedel Size 100mm   
+        1 &#215 Child Face Mask   
+        1 &#215 Child Nebuliser Mask   
+        1 &#215 Child Non-Rebreather Mask   
+        1 &#215 Nasal Cannula   
+        1 &#215 Oxygen Administration Bag c/w :- 
+        1 &#215 Oxygen Filled Cylinder 
+        1 &#215 Regulator 
+         
+        18.	Frontal Wall: Overhead Compartment (Safety Vests) 
+        4 &#215 Raincoat Pantsuit With Wording "SCDF"   
+        4 &#215 Safety Vest c/w Wordings "SCDF PARAMEDIC" 
+        
+        
+        19. Right Wall: In-Appliance Fixtures 
+        2 &#215 In-Vehicle Oxygen Filled Cylinder (Main Tank) 
+        Mechanical Compression Device (LUCAS2) c/w :- 
+        
+        1 Pair &#215 Wrist Strap   
+        1 Pair &#215 Shoulder Straps (Yellow)   
+        1 &#215 Disposable Suction Cup   
+        1 &#215 Operational Battery   
+        1 &#215 Spare Battery   
+        1 &#215 Spare Disposable Suction Cup 
+        Mechanical Compression Device (CORPULS) c/w :- 
+        1 &#215 Recboard 
+        1 &#215 Fixation Ring   
+        2 &#215 Stamp Piece (Long & Short)   
+        1 &#215 Operational Battery   
+        1 &#215 Spare Battery   
+        1 &#215 3 Pin Direct Power Cable 
+        Portable Suction Unit Set (AMBUJET) c/w :- 
+        1 &#215 Base Plate Charger   
+        1 &#215 Reusable Canister   
+        1 &#215 Suction Tubing   
+        1 &#215 Disposable Filter Group   
+        1 &#215 Shoulder Belt   
+        2 &#215 Yankauer Suction Catheter, Adult 
+         
+        20. Right Wall: In-Appliance Drug Fridge Cooler Bag (Medium)  
+        1 Strip &#215 Aspirin 100mg/tab (Min of 3 tabs on strip)  
+        1 Box &#215 Oral Prednisolone 5mg/tab (Pending Implementation)  
+        4 &#215 IV Hydrocortisone 100mg/vial (Pending Implementation) 
+        2 &#215 IV Tranexamic Acid 500mg/5ml 
+        1 Bottle &#215 GTN Spray 0.4mg/Spray 
+        8 &#215 Injection Adrenaline (Pre-mix 1:10 000) 10ml 
+        3 &#215 Injection Adrenaline (1:1000) 1ml 
+        2 &#215 Injection Syntometrine 1mg/ml 
+        1 &#215 Injection Tramadol 50mg/ml 
+        1 &#215 Penthrox Inhalant, 3ml 
+        4 &#215 Rectal Diazepam 5mg/2.5ml Tube 
+        2 &#215 Sodium Chloride 20ml/Amp 
+        1 &#215 Ventolin Solution 5mg/ml 
+        10 &#215 Injection Atropine 600mcg/ml 
+        4 &#215 Honey Oral Glucose Sachet 20g 
+        1 &#215 Oxymetazoline HCL Nasal Spray 0.05% 
+        2 &#215 SIRAD Card 
+        1 Strip &#215 Paracetamol 500mg/tab 
+        3 &#215 IV Amiodarone 150mg/3mls amp 
+        
+        
+        21. Right Wall: Storage Compartment Below Drug Fridge 
+        Burn Kit Set c/w :- 
+        
+        2 &#215 Dressing Size (10cm &#215 40cm)  
+        5 &#215 Dressing Size (20cm &#215 45cm)  
+        1 &#215 Face Mask  
+        2 &#215 Gel 4g  
+        2 &#215 Hand Dressing  
+        4 &#215 Umbrella  
+        1 &#215 Ambulance Platform Measuring Tool 
+        
+        Right Wall: Maternity Kit Set: Front Pocket  
+        2 &#215 Disposable Gown 
+        Neonate Blood Pressure Set c/w :- 
+        1 &#215 Neonate Blood Pressure Hose (Single Lumen)  
+        1 &#215 Neonate Blood Pressure Cuff Size 1  
+        1 &#215 Neonate Blood Pressure Cuff Size 2  
+        1 &#215 Neonate Blood Pressure Cuff Size 3  
+        1 &#215 Neonate Blood Pressure Cuff Size 4  
+        1 &#215 Neonate Blood Pressure Cuff Size 5  
+         
+        23.	Right Wall: Maternity Kit Set: Centre Compartment  
+        1 &#215 Airway Guedel Size 40mm 
+        1 &#215 Airway Guedel Size 50mm 
+        Disposable BVM Neonate Set :- 
+        
+        1 &#215 Face mask Size 1  
+        1 &#215 Reservoir Bag 
+         
+        24.	Right Wall: Maternity Kit Set: Compartment A 
+        Disposable Pre-Packed Delivery Set c/w :- 
+        
+        1 &#215 Artery Forcep  
+        1 &#215 Umbilical Cord Scissors  
+        1 &#215 Tray  
+        1 &#215 Draper Paper  
+        1 &#215 Incontinence Sheet  
+        1 &#215 Gallipot  
+        1 &#215 Poly Sheet  
+        1 &#215 Limpet Bag  
+        1 &#215 C-Fold Hand Towel  
+        2 &#215 Umbilical Cord Clamp  
+        12 &#215 Cotton Ball 
+         
+        25. Right Wall: Maternity Kit Set: Compartment B  
+        5 &#215 Disposable Surgical Mask  
+        2 &#215 Individually Sealed Sanitary Pad 
+        2 &#215 Limpet Bag 
+        2 &#215 Newborn Thermal Wrap 
+        1 Sterile Latex Gloves, Size 6 
+        1 Sterile Latex Gloves, Size 7 
+        1 Sterile Latex Gloves, Size 8 
+        
+        
+        26. Right Wall: Maternity Kit Set: Compartment C  
+        2 &#215 Chlorhexidine Gluconate 0.05% 25ml / Sachet  
+        2 &#215 Disposable Mucus Extractor 
+        
+        
+        27. Right Wall: Maternity Kit Set: Compartment D  
+        5 &#215 Alcohol Swab  
+        2 &#215 Needle Size 21G  
+        2 &#215 Needle Size 23G  
+        2 &#215 Syringe 3ml 
+        
+        
+        28. Right Wall: Paediatric Resuscitation Kit 
+        1 &#215 Broselow Tape  
+        1 &#215 Airway Guedel Size 40mm 
+        1 &#215 Airway Guedel Size 50mm 
+        Disposable BVM Child Set c/w :- 
+        
+        1 &#215 Face Mask Size 3  
+        1 &#215 Reservoir Bag  
+        2 &#215 Disposable Airway Tube Holder Child  
+        1 &#215 Prepacked MLA with Lubricating Jelly and 10cc Syringe, Size 2  
+        1 &#215 Prepacked MLA with Lubricating Jelly and 10cc Syringe, Size 2.5 
+        
+        Right Wall: TECC Kit  
+        1 &#215 Customised Thigh Pouch  
+        4 &#215 Arterial Tourniquet  
+        10 &#215 Haemostatic Bandage (7.5 cm by 120 cm)  
+        10 &#215 Reflective Slap Wrap (Black & White)  
+        10 &#215 Reflective Slap Wrap (Red)  
+        5 &#215 IV Cannula 18G  
+        5 &#215 IV Cannula 16G  
+        2 &#215 Paramedic Scissors  
+        4 &#215 Self-Adherence Wrap (5 cm by 457 cm)  
+        4 &#215 Chest Seal  
+        10 &#215 Alcohol Swab  
+        2 &#215 Durapore Tape 1"  
+        2 &#215 Airway Guedel Size 70mm 
+        2 &#215 Airway Guedel Size 80mm 
+        2 &#215 Airway Guedel Size 90mm 
+        2 &#215 Airway Guedel Size 100mm 
+        
+        Right Wall: Overhead Compartment 1 (Trauma Expendables)  
+        2 &#215 Arterial Tourniquet  
+        2 &#215 Pelvic Binder  
+        2 &#215 SAM Splint  
+        10 &#215 Triangular Bandage 
+        
+        Right Wall: Overhead Compartment 2 (Airway Management)  
+        2 &#215 Disposable BVM Adult  
+        1 &#215 Airway Guedel Size 40mm  
+        1 &#215 Airway Guedel Size 50mm  
+        2 &#215 Airway Guedel Size 70mm  
+        2 &#215 Airway Guedel Size 80mm  
+        2 &#215 Airway Guedel Size 90mm  
+        2 &#215 Airway Guedel Size 100mm  
+        2 &#215 End Tidal Carbon Dioxide Sensor, Adult/Paediatric 
+        
+        Right Wall: Overhead Compartment 3 (Advance Airway Management) 
+        2 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe Size 3  
+        2 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe Size 4  
+        2 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe Size 5  
+        2 &#215 Disposable Airway Tube Holder Adult 
+        
+        Right Wall: Overhead Compartment 4 (Paediatric Management)  
+        2 &#215 Child Face Mask  
+        2 &#215 Child Nebuliser Mask  
+        2 &#215 Child Non-Rebreather Mask  
+        2 &#215 Disposable Airway Tube Holder Child 
+        Disposable BVM Child Set c/w :- 
+        1 &#215 Face Mask Size 3  
+        1 &#215 Reservoir Bag  
+        1 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe Size 2  
+        1 &#215 Prepacked LMA with Lubricating Jelly and 20cc Syringe Size 2.5 
+        
+        Right Wall: Overhead Compartment 5 (Maternity & Delivery)  
+        2 &#215 Chlorhexidine Gluconate 0.05% 25ml / Sachet  
+        Disposable BVM Neonate Set c/w :- 
+        1 &#215 Face Mask Size 1  
+        1 &#215 Reservoir Bag  
+        1 &#215 Disposable Pre-Packed Delivery Set  
+        2 &#215 Individually Sealed Sanitary Pad  
+        1 &#215 Sterile Latex Gloves, Size 6 
+        1 &#215 Sterile Latex Gloves, Size 7 
+        1 &#215 Sterile Latex Gloves, Size 8 
+        2 &#215 Newborn Thermal Wrap 
+        
+        Right Wall: Left Webbing (Top)  
+        2 &#215 Defibrillator Pad, Adult  
+        2 &#215 Defibrillator Pad, Paediatric  
+        3 &#215 Disposable Shaver  
+        
+        Right Wall: Left Webbing (Middle)  
+        5 &#215 Crepe Bandage 5cm  
+        3 &#215 Crepe Bandage 7.5cm 
+        
+        Right Wall: Left Webbing (Bottom)  
+        2 &#215 Crepe Bandage 10cm  
+        2 &#215 Crepe Bandage 15cm 
+        
+        Right Wall: Right Webbing (Top)  
+        3 &#215 ECG Electrodes Packet  
+        1 &#215 Spare ZOLL Battery  
+        2 &#215 ECG Paper Roll 
+        
+        Right Wall: Right Webbing (Middle)  
+        5 &#215 Antiseptic Wipes  
+        1 &#215 Ear Probe Box  
+        5 &#215 Limpet Bag  
+        10 &#215 Vomitus Bag 
+        
+        Right Wall: Right Webbing (Bottom)  
+        2 &#215 Yankauer Suction Catheter, Adult  
+        2 &#215 Suction Catheter Size 10FG   
+        2 &#215 Suction Catheter Size 16FG   
+        2 &#215 PSU Disposable Filter Group  
+        5 &#215 Incontinence Sheet 
+        
+        Left Wall: Handrails  
+        1 &#215 Cervical Collar Size Adjustable (Adult)  
+        1 &#215 Cervical Collar Size Paediatric 
+        
+        Left Wall: Overhead Compartment (PPE & DOA)  
+        2 &#215 Body Cover 2.4m &#215 1.4m (DOA White Sheet)  
+        Personal Protective Equipment Set (EBOLA) c/w :- 
+        4 &#215 Pair Non-Sterile, Nitrile Gloves 9" 
+        4 &#215 Pair Non-Sterile, Nitrile Gloves 12" 
+        4 &#215 Mask with Face Shield 
+        4 &#215 N95 Mask 
+        4 &#215 Coverall Suit 
+        4 &#215 Waterproof High Boot Cover 
+        Personal Protective Equipment Set (MERS-COV) c/w :- 
+        4 &#215 Pair Non-Sterile, Nitrile Gloves 9" 
+        4 &#215 Pair Non-Sterile, Nitrile Gloves 12" 
+        4 &#215 Bouffant Cap 
+        4 &#215 Goggles 
+        4 &#215 N95 Mask 
+        4 &#215 High Risk Isolated Gown 
+        4 Pairs &#215 Waterproof Shoe Cover 
+        3 Pairs &#215 Marine Sting Cover 
+        
+        Left Wall: Drip Bottles & Other Compartment  
+        5 &#215 IV Admin Drip Set  
+        3 &#215 IV Dextrose 10%, 500ml  
+        3 &#215 IV Normal Saline 0.9%, 500ml  
+        1 &#215 IV Normal Saline 0.9%, 100ml 
+        
+        Left Wall: Face Mask & Others Compartment  
+        3 &#215 Adult Face Mask  
+        3 &#215 Adult Nebuliser Mask  
+        3 &#215 Adult Non-Rebreather Mask  
+        5 &#215 Nasal Cannula 
+        
+        Left Wall: Bottom Side Compartment AFT  
+        1 &#215 Disinfectant Wipes  
+        1 &#215 Drinking Water Bottle  
+        3 &#215 Kidney Dish 
+        
+        Left Wall: Bottom Side Compartment FWD  
+        1 &#215 Hand Sanitiser  
+        3 &#215 Ice Pack  
+        1 &#215 Tissue Pack  
+        1 &#215 Biohazard Container 1.6L 
+        
+        Left Wall: Side Plastic Boxes (Top Row) - Tapes 
+        2 &#215 Durapore Tape 1"  
+        2 &#215 Surgical Tape 1/2"   
+        2 &#215 Surgical Tape 1"   
+        20 &#215 Bandage Adhesive (Finger Dressing)   
+        30 &#215 Lancet  
+        20 &#215 Blood Glucose Test Strip  
+        30 &#215 Alcohol Swab 
+        
+        Left Wall: Side Plastic Boxes (Top Row) - Needles  
+        5 &#215 Needle Size 21G  
+        5 &#215 Needle Size 23G 
+        
+        Left Wall: Side Plastic Boxes (Middle Row)  
+        10 &#215 Needle Size 18G  
+        10 &#215 Needle Size 20G  
+        10 &#215 Needle Size 22G  
+        5 &#215 Needle Size 24G  
+        20 &#215 Transparent Dressing (Tegaderm) 
+        
+        Left Wall: Side Plastic Boxes (Bottom Row)  
+        10 &#215 Sterile Gauze  
+        10 &#215 Sterile Pad Size Small (10cm &#215 20cm)  
+        5 &#215 Sterile Pad Size Large (20cm &#215 20cm)  
+        15 &#215 Melolin Size 10cm &#215 10cm 
+        
+        Left Wall: Side Plastic Boxes (Bottom Row) - Syringes 
+        5 &#215 Syringe 3ml  
+        5 &#215 Syringe 10ml  
+        2 &#215 Syringe 1ml 
+        
+        Rear Door: Top Right Pouch  
+        2 &#215 Rescue Helmet c/w Goggles & Flashlights 
+        
+        Rear Door: Bottom Right Pouch  
+        3 &#215 Linens / Disposable Flatsheets  
+        2 &#215 Inflatable Pillow 
+        
+        Rear Door: Top Left Pouch  
+        3 &#215 Blanket 
+        
+        Rear Door: Webbing Compartment  
+        1 &#215 E-Flare  
+        4 &#215 Securing Buckle for 2nd Lying Stretcher 
+        
+        External Storage: External Compartment A  
+        1 &#215 Combi Stretcher c/w 3 Restraints 
+        Paediatric Immobilisation System c/w :- 
+        1 &#215 Back Board  
+        2 &#215 Disposable Head Paddings 
+        1 &#215 Aluminum Long Backboard c/w 3 Restraints  
+        1 &#215 Collapsible (Spare) Stretcher c/w 3 Restraints 
+        Fracture Immobiliser Set c/w :- 
+        1 &#215 Lower Limb, Adult  
+        1 &#215 Lower Limb, Paediatric  
+        2 &#215 Straps  
+        1 &#215 Shoulder  
+        1 &#215 Upper Limb, Adult  
+        1 &#215 Upper Limb, Paediatric  
+        1 &#215 Head Immobiliser  
+        1 &#215 Kendrick Extrication Device (KED)  
+        1 &#215 PVC Handheld Stretcher (Orange Canvas) 
+        Weighted Ground Sheet (4 Colours) c/w :- 
+        1 &#215 Red / Yellow / Green / Black 
+         
+        57. External Storage: MI-KIT: External Top Pocket  
+        2 &#215 Ultraradiac   
+        5 &#215 Polythene Bag  
+        10 &#215 Antiseptic Wipes 
+        
+        
+        58. External Storage: MI-KIT: External Left Pocket  
+        20 &#215 Triage Tag (METTAG) 
+        
+        
+        59. External Storage: MI-KIT: External Right Pocket  
+        5 &#215 Non-Sterile, Nitrile Gloves 9" (Size S)  
+        5 &#215 Non-Sterile, Nitrile Gloves 9" (Size M)  
+        5 &#215 Non-Sterile, Nitrile Gloves 9" (Size L) 
+        
+        
+        60. External Storage: MI-KIT: Internal Netting Compartment A  
+        4 &#215 Crepe Bandage 5cm  
+        4 &#215 Crepe Bandage 7.5cm 
+        
+        
+        61. External Storage: MI-KIT: Internal Netting Compartment B  
+        3 &#215 Crepe Bandage 10cm  
+        5 &#215 Crepe Bandage 15cm 
+        
+        
+        62.	External Storage: MI-KIT: Main Compartment  
+        15 &#215 Triangular Bandage  
+        4 &#215 Burn Dressing (Size 60cm &#215 80cm)  
+        8 &#215 Sterile Gauze  
+        8 &#215 Melolin Size 10cm &#215 10cm 
+        8 &#215 Sterile Pad Size Small (10cm &#215 20cm)  
+        2 &#215 Sterile Pad Size Large (20cm &#215 20cm)  
+        12 &#215 Wound Dressing FAD Size 13  
+        12 &#215 Wound Dressing FAD Size 14  
+        2 &#215 Wound Dressing FAD Size 15  
+        20 &#215 Bandage Adhesive (Finger Dressing)  
+        20 &#215 Alcohol Swab  
+        5 &#215 Transparent Dressing (Tegaderm)  
+        1 &#215 Surgical Tape 1/2"  
+        1 &#215 Surgical Tape 1"   
+        2 &#215 IV Cannula 18G  
+        2 &#215 IV Cannula 20G  
+        2 &#215 IV Cannula 22G  
+        2 &#215 IV Cannula 24G  
+        2 &#215 Syringe 3ml  
+        2 &#215 Syringe 10ml  
+        2 &#215 Needle Size 21G  
+        2 &#215 Needle Size 23G  
+        2 &#215 IV Normal Saline 0.9%, 500ml  
+        1 &#215 IV Dextrose 10%, 500ml  
+        5 &#215 IV Admin Drip Set  
+        1 &#215 Venous Tourniquet  
+        2 &#215 Arterial Tourniquet  
+        1 &#215 Biohazard Container 1.6L 
+        
+        
+        63. External Storage: MI-KIT: Main Compartment (Internal Pocket)  
+        MCI Armbands with Pouch c/w :- 
+        
+        1 &#215 Armbands (Forward Triage)  
+        1 &#215 Armbands (FAP OIC)  
+        1 &#215 Armbands (Triage IC)  
+        1 &#215 Armbands (P1)  
+        1 &#215 Armbands (P2)  
+        1 &#215 Armbands (P3)  
+        1 &#215 Armbands (AP)  
+        3 &#215 Armbands (EMT)
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div class="footer-container" draggable="false">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+      <a class="col d-flex align-items-center justify-content-center link-body-emphasis text-decoration-none">
+        <img src="./assets/icons/heart-pulse.svg" style="width: 20px;">
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
