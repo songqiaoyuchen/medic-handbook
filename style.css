@@ -512,6 +512,11 @@ h4 {
     font-weight: bold;
 }
 
+h5 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .article *{
     color:#e4e3fd;
 }
