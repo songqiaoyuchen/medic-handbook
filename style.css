@@ -94,6 +94,10 @@ p {
     background-color: #aaa7ff56;
 }
 
+.sub-link:hover .sub-link:active {
+    background-color: #aaa7ff56;
+}
+
 .navbar-toggler {
     border-radius: 2%;
     --bs-navbar-toggler-padding-x: 0.2rem;
@@ -475,6 +479,31 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
 
+/* LINKS */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.links a {
+    color: #AAA7FF;
+    display: block;
+}
+
+.links .h2-container {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 21px;
+}
+
+
+
+
+
 /* SUBPAGES */
 .dir-toggler, .mobile-brand {
     display: none;
@@ -561,6 +590,10 @@ ul, ol {
 
 li {
     padding: 3px;
+}
+
+li a {
+    color: #AAA7FF !important;
 }
 
 .article-page .container-fluid {
