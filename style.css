@@ -288,6 +288,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     display: block;
     transition: 0.3s;
     overflow: hidden;
+    border-radius: 0;
 }
 
 .inpage-directory .sub-link {
@@ -510,12 +511,6 @@ h4 {
     font-size: 21px;
     margin: 24px 0px;
     font-weight: bold;
-}
-
-h5 {
-    font-weight: bold;
-    font-size: 18px;
-    color: white !important;
 }
 
 .article *{

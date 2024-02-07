@@ -312,3 +312,26 @@ function scrollToZollRef() {
   element.scrollIntoView();
   window.scrollBy(0, -95.19)
 }
+
+//SCROLL
+function scrollToID(ID) {
+  const element = document.getElementById(ID);
+  element.scrollIntoView();
+  window.scrollBy(0, -95.19)
+}
+
+//DROPDOWNS
+function toggleDropdown(x, n){
+  var dropdown = x.nextElementSibling;
+  var h = Math.round(53.19 * n + 16) + 'px';
+  console.log(h)
+
+  if(dropdown.style.height === '0px'){
+    dropdown.style.height = h;
+    console.log(1)
+  } else if(dropdown.style.height === h){
+    dropdown.style.height = '0px';
+    console.log(0)
+  }
+  x.classList.toggle("change")
+}
