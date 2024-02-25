@@ -317,6 +317,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-color: #0e0535; 
     overflow-x: hidden; 
     transition: 0.3s; 
+    padding-right: 8px;
 }
 
 .directory .nav-link {
